@@ -1,25 +1,23 @@
-name: ci
+name: Frontend CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  ci:
+  frontend-ci:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        os: [alpine-latest]
+        os: [ubuntu-latest]
         node: [lts/*]
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       - name: Setup node env 🏗
         uses: actions/setup-node@v3.0.0
@@ -42,7 +40,6 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
-
 
       - name: Run tests 🧪
         run: yarn test
