@@ -1,0 +1,11 @@
+### node/nuxt
+.git
+.nuxt/
+.output/
+.vscode/
+*Dockerfile*
+*docker-compose*
+dist/
+node_modules/
+obj/
+package-lock.json
