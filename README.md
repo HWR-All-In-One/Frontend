@@ -1,5 +1,19 @@
 # Frontend
 
+## Github
+
+### `branching`
+
+main: 
+- branch with final project changes
+
+dev: 
+- branch with main development changes 
+
+feature/HAIO-{Jira-Nr.}-description:
+- branch for specific development changes
+- branch name needs branch number from Jira Kanban Tickets and a description with what will be done
+
 ## Build Setup
 
 ```bash
