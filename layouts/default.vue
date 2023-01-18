@@ -1,9 +1,13 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      fixed
-      app
+      permanent
+      width="3.2%"
     >
+      <v-list-item-avatar>
+          <v-img src=" "></v-img>
+        </v-list-item-avatar>
+
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -57,7 +61,7 @@ export default {
         }, 
         {
           icon: 'mdi-email',
-          title: 'E-Mail',
+          title: 'mail',
           to: '/mail'
         }
         
