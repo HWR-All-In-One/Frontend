@@ -2,12 +2,12 @@
   <v-app dark>
     <v-navigation-drawer
       permanent
-      width="6rem"
+      width="5rem"
       fixed
       app
     >
       <div class="logo">
-          <img src="../assets/HWR-lOGO-7.png" alt="HWR-APP-logo">
+          <img src="../assets/logo.png" alt="HWR-APP-logo">
         </div>
       <v-list>
         
@@ -86,22 +86,20 @@ export default {
   .v-navigation-drawer{
     display: flex;
     flex-direction: column;
-    
-    
-    padding: 1rem;
+  
     background-color: var(--dark);
     color: var(--light);
 
     .logo {
       position: relative;
       margin:0 0 50px;
-      padding: 0px;
-      background:rgba(255,255,255,0.4);
-      opacity: 0.22;
+      padding: 0.5rem;
+      background:rgba(255,255,255,0);
+      opacity: 5;
       
 
       img {
-        height:4rem;
+        height:5rem;
         width:4rem;
       }
     }
