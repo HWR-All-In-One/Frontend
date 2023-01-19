@@ -2,13 +2,15 @@
   <v-app dark>
     <v-navigation-drawer
       permanent
-      width="3.2%"
+      width="6rem"
+      fixed
+      app
     >
-      <v-list-item-avatar>
-          <v-img src=" "></v-img>
-        </v-list-item-avatar>
-
+      <div class="logo">
+          <img src="../static/HWR-lOGO-7.png" alt="HWR-APP-logo">
+        </div>
       <v-list>
+        
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -26,7 +28,13 @@
       fixed
       app
     >
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-toolbar-title
+      permanent
+      fixed
+      width:15rem
+      >{{ title }}
+      
+      </v-toolbar-title>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -34,7 +42,7 @@
       </v-container>
     </v-main>
     <v-footer
-      :absolute="!fixed"
+      :absolute="fixed"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -57,7 +65,7 @@ export default {
         {
           icon: 'mdi-calendar-multiple',
           title: 'calendar',
-          to: '/calendar'
+          to: '../pages/calendar.vue'
         }, 
         {
           icon: 'mdi-email',
@@ -68,7 +76,34 @@ export default {
       ],
       miniVariant: false,
       title: 'HWR AIO'
+
     }
   }
 }
-</script>
+</script> 
+
+<style lang="scss">
+  .v-navigation-drawer{
+    display: flex;
+    flex-direction: column;
+    
+    
+    padding: 1rem;
+    background-color: var(--dark);
+    color: var(--light);
+
+    .logo {
+      position: relative;
+      margin:0 0 50px;
+      padding: 0px;
+      background:rgba(255,255,255,0.4);
+      opacity: 0.22;
+      
+
+      img {
+        height:4rem;
+        width:4rem;
+      }
+    }
+}
+</style>
