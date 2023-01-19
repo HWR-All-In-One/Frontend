@@ -7,7 +7,7 @@
       app
     >
       <div class="logo">
-          <img src="../static/HWR-lOGO-7.png" alt="HWR-APP-logo">
+          <img src="../assets/HWR-lOGO-7.png" alt="HWR-APP-logo">
         </div>
       <v-list>
         
