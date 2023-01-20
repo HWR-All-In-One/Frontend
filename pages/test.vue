@@ -87,9 +87,9 @@
         <!-- S -->
 
         <div class="component">
-            <h3 class="component-title">
+            <h2 class="component-title">
                 Stundenplan - Schedule.vue
-            </h3>
+            </h2>
             <div class="component-box">
                 <Schedule/>
             </div>
@@ -127,21 +127,21 @@
         <!-- End of Component Library -->
 
         <div class="main-component">
-            <h2 class="main-title">
-                Kompenentenvorlage
-            </h2>
+            <h1 class="main-title">
+                Komponentenvorlage
+            </h1>
         </div>
 
         <!-- Default Component - Do not delete !!! -->
 
         <div class="component">
-            <h3 class="component-title">
+            <h2 class="component-title">
                 Titel der Komponente
                 <!-- 
                     Besteht aus der deutschen Komponentenbezeichnung und dem Vue-Dateinamen
                     Beispiel: Stundenplan - Schedule.vue 
                 -->
-            </h3>
+            </h2>
             <div class="component-box">
                 Tag zur Komponente
                 <!-- 
@@ -175,7 +175,7 @@ export default {
 
 .main-title,
 .component-main-title {
-    padding: 50px 0 25px 0;
+    padding: 30px 0 30px 0;
 }
 
 .component-title {
@@ -191,6 +191,10 @@ export default {
     border-radius: 30px;
     flex-direction: column;
     width: 100%;
+}
+
+.component:last-child {
+    margin-bottom: 30px;
 }
 
 .component-box {
