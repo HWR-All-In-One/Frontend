@@ -7,10 +7,9 @@
       app
     >
       <div class="logo">
-          <img src="../assets/logo.png" alt="HWR-APP-logo">
+          <img src="../assets/logo-round-edition-WB.png" alt="HWR-APP-logo">
         </div>
-      <v-list>
-        
+      <v-list>        
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -33,12 +32,11 @@
       fixed
       width:15rem
       >{{ title }}
-      
       </v-toolbar-title>
     </v-app-bar>
     <v-main>
       <v-container>
-        <Nuxt />
+        <DropdownList />
       </v-container>
     </v-main>
     <v-footer
@@ -52,6 +50,8 @@
 
 <script>
 export default {
+  name: 'app',
+  
   name: 'DefaultLayout',
   data () {
     return {
@@ -99,7 +99,7 @@ export default {
       
 
       img {
-        height:5rem;
+        height:4rem;
         width:4rem;
       }
     }
