@@ -11,6 +11,7 @@
 <script>
 import Dropdown from './Dropdown';
 
+
 export default {
   name: 'navbar',
   components: {
@@ -44,9 +45,7 @@ export default {
 
 nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  }
 
 nav .menu-item {
   color: #FFF;

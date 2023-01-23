@@ -2,12 +2,12 @@
   <v-app dark>
     <v-navigation-drawer
       permanent
-      width="5rem"
+      mini-variant
       fixed
       app
     >
       <div class="logo">
-          <img src="../assets/logo-round-edition-WB.png" alt="HWR-APP-logo">
+          <img src="../assets/v.png" alt="HWR-APP-logo">
         </div>
       <v-list>        
         <v-list-item
@@ -56,6 +56,7 @@ export default {
   data () {
     return {
       fixed: false,
+      
       items: [
         {
           icon: 'mdi-account',
@@ -99,9 +100,10 @@ export default {
       
 
       img {
-        height:4rem;
-        width:4rem;
+        height:2rem;
+        width:2rem;
       }
+      
     }
 }
 </style>
