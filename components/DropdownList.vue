@@ -1,53 +1,85 @@
 <template>
-  <nav>
-    
-    <Dropdown title="Services" :items="sections" />
-    
-  </nav>
+  <div @click="selectNode" class="menu-item"  >
+    <v-treeview :items="items"></v-treeview>
+
+  </div>
 </template>
 
-
-
 <script>
-import Dropdown from './Dropdown';
-
-
-export default {
-  name: 'navbar',
-  components: {
-    Dropdown
-
-  },
-
-  data () {
-    return {
-      sections: [
+  
+  export default {
+    data: () => ({
+      active: false,
+      items: [
         {
-          title: 'IT',
-          
+          id: 1 ,
+          name: 'Fachrichtung',
+          children: [
+            { id: 2, name: 'Bank'},
+            { id: 3, name: 'Bauwesen', 
+            children: [
+                {
+                  id: 4,
+                  name: 'Semester',
+                  children: [
+                    { id: 5,
+                      name: '1 - Kurs A ',
+                      children: [
+                                  {
+                                    id: 11,
+                                    name: 'src :',
+                                    children: [
+                                      { id: 12, name: 'v-btn : ts' },
+                                      { id: 13, name: 'v-card : ts' },
+                                      { id: 14, name: 'v-window : ts' },
+                                    ],
+                                  },
+                                ]  
+                              },
+                    { id: 6, name: '1 - Kurs B' },
+                    { id: 7, name: '2 - Kurs A' },
+                    { id: 8, name: '2 - Kurs B' },
+                    { id: 9, name: '3 - Kurs A' },
+                    { id: 10, name: '3 - Kurs B' },
+                    { id: 11, name: '4 - Kurs A' },
+                    { id: 12, name: '4 - Kurs B' },
+                    { id: 13, name: '5 - Kurs A' },
+                    { id: 14, name: '5 - Kurs B' },
+                    { id: 13, name: '6 - Kurs A' },
+                    { id: 14, name: '6 - Kurs B' },
+
+                  ],
+                },
+              ],
+            },
+            { id: 15, name: 'DL' },
+            { id: 16, name: 'Elektrotechnik' },
+            { id: 17, name: 'FM' },
+            { id: 18, name: 'Handel' },
+            { id: 19, name: 'Iba' },
+            { id: 20, name: 'Immobilien' },
+            { id: 21, name: 'Industrie' },
+            { id: 22, name: 'Informatik' },
+            { id: 23, name: 'Wirtschaft Informatik' }       
+          ]
         },
-        {
-          title: 'IP',
-          link:'#'
-        },
-        {
-          title: 'WI',
-          link: '#'
-        }
-      ]
-    }
+      ],
+    }),
   }
-}
+  
 </script>
 
 <style>
+.v-treeview-node__children{
+align-items: center;
+justify-content: center;
+top: calc(100% + 18px);
+width: max-content;
 
+}
 
-nav {
-  display: flex;
-  }
-
-nav .menu-item {
+.menu-item
+ {
   color: #FFF;
   padding: 10px 20px;
   position: relative;
@@ -57,14 +89,4 @@ nav .menu-item {
   transition: 0.4s;
 }
 
-nav .menu-item.active,
-nav .menu-item:hover {
-  background-color: #444;
-  border-bottom-color: #FF5858;
-}
-
-nav .menu-item a {
-  color: inherit;
-  text-decoration: none;
-}
 </style>
