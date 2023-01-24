@@ -1,92 +1,235 @@
 <template>
-  <div @click="selectNode" class="menu-item"  >
+  <div @click="selectNode" class="menu-item">
     <v-treeview :items="items"></v-treeview>
 
   </div>
 </template>
 
 <script>
-  
-  export default {
-    data: () => ({
-      active: false,
-      items: [
-        {
-          id: 1 ,
-          name: 'Fachrichtung',
-          children: [
-            { id: 2, name: 'Bank'},
-            { id: 3, name: 'Bauwesen', 
+export default {
+  data: () => ({
+    active: false,
+    items: [
+      {
+        id: 10000,
+        name: 'Fachrichtung',
+        children: [
+          { id: 20000, 
+            name: 'Informatik', 
             children: [
-                {
-                  id: 4,
-                  name: 'Semester',
-                  children: [
-                    { id: 5,
-                      name: '1 - Kurs A ',
-                      children: [
-                                  {
-                                    id: 11,
-                                    name: 'src :',
-                                    children: [
-                                      { id: 12, name: 'v-btn : ts' },
-                                      { id: 13, name: 'v-card : ts' },
-                                      { id: 14, name: 'v-window : ts' },
-                                    ],
-                                  },
-                                ]  
-                              },
-                    { id: 6, name: '1 - Kurs B' },
-                    { id: 7, name: '2 - Kurs A' },
-                    { id: 8, name: '2 - Kurs B' },
-                    { id: 9, name: '3 - Kurs A' },
-                    { id: 10, name: '3 - Kurs B' },
-                    { id: 11, name: '4 - Kurs A' },
-                    { id: 12, name: '4 - Kurs B' },
-                    { id: 13, name: '5 - Kurs A' },
-                    { id: 14, name: '5 - Kurs B' },
-                    { id: 13, name: '6 - Kurs A' },
-                    { id: 14, name: '6 - Kurs B' },
-
-                  ],
-                },
-              ],
-            },
-            { id: 15, name: 'DL' },
-            { id: 16, name: 'Elektrotechnik' },
-            { id: 17, name: 'FM' },
-            { id: 18, name: 'Handel' },
-            { id: 19, name: 'Iba' },
-            { id: 20, name: 'Immobilien' },
-            { id: 21, name: 'Industrie' },
-            { id: 22, name: 'Informatik' },
-            { id: 23, name: 'Wirtschaft Informatik' }       
-          ]
-        },
-      ],
-    }),
-  }
-  
+              {
+                id: 30000,
+                name: 'Jahrgang',
+                children: [
+                  { 
+                    id: 40000,
+                    name: '2021',
+                    children: [
+                      {
+                        id: 50000,
+                        name: '1. Semester',
+                        children: [
+                          {
+                            id: 60000, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60001, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50001,
+                        name: '2. Semester',
+                        children: [
+                          {
+                            id: 60002, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60003, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50002,
+                        name: '3. Semester',
+                        children: [
+                          {
+                            id: 60004, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60005, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50003,
+                        name: '4. Semester',
+                        children: [
+                          {
+                            id: 60006, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60007, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50004,
+                        name: '5. Semester',
+                        children: [
+                          {
+                            id: 60008, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60009, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50005,
+                        name: '6. Semester',
+                        children: [
+                          {
+                            id: 60010, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60011,
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                    ]  
+                  },
+                  { 
+                    id: 40001, 
+                    name: '2022',
+                    children: [
+                      {
+                        id: 50006,
+                        name: '1. Semester',
+                        children: [
+                          {
+                            id: 60012, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60013, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50007,
+                        name: '2. Semester',
+                        children: [
+                          {
+                            id: 60014, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60015, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50008,
+                        name: '3. Semester',
+                        children: [
+                          {
+                            id: 60016, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60017, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50009,
+                        name: '4. Semester',
+                        children: [
+                          {
+                            id: 60018, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60019, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50010,
+                        name: '5. Semester',
+                        children: [
+                          {
+                            id: 60020, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60021, 
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                      {
+                        id: 50011,
+                        name: '6. Semester',
+                        children: [
+                          {
+                            id: 60022, 
+                            name: 'Kurs A',
+                          },
+                          {
+                            id: 60023,
+                            name: 'Kurs B',
+                          },
+                        ],
+                      },
+                    ] 
+                  },
+                  { 
+                    id: 40002, 
+                    name: '2023' 
+                  },
+                ],
+              },
+            ],
+          },     
+        ]
+      },
+    ],
+  }),
+}
 </script>
 
 <style>
-.v-treeview-node__children{
-align-items: center;
-justify-content: center;
-top: calc(100% + 18px);
-width: max-content;
-
-}
-
-.menu-item
- {
-  color: #FFF;
-  padding: 10px 20px;
-  position: relative;
-  text-align: center;
-  border-bottom: 3px solid transparent;
+.menu-item {
   display: flex;
+  color: #FFF;
   transition: 0.4s;
 }
 
+.v-treeview-node__root {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #FFF;
+}
+
+.v-treeview-node__children {
+  align-items: right;
+}
 </style>

@@ -36,74 +36,72 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <DropdownList />
+        <DropdownList/>
       </v-container>
     </v-main>
     <v-footer
       :absolute="fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  
-  name: 'DefaultLayout',
-  data () {
-    return {
-      fixed: false,
-      
-      items: [
-        {
-          icon: 'mdi-account',
-          title: 'Account',
-          to: '/account'
-        },
-        {
-          icon: 'mdi-calendar-multiple',
-          title: 'calendar',
-          to: '../pages/calendar.vue'
-        }, 
-        {
-          icon: 'mdi-email',
-          title: 'mail',
-          to: '/mail'
-        }
-        
-      ],
-      miniVariant: false,
-      title: 'HWR AIO'
+import DropdownList from '~/components/DropdownList.vue';
 
+export default {
+    name: "app",
+    name: "DefaultLayout",
+    data() {
+        return {
+            fixed: false,
+            items: [
+                {
+                    icon: "mdi-account",
+                    title: "Account",
+                    to: "/account"
+                },
+                {
+                    icon: "mdi-calendar-multiple",
+                    title: "calendar",
+                    to: "../pages/calendar.vue"
+                },
+                {
+                    icon: "mdi-email",
+                    title: "mail",
+                    to: "/mail"
+                }
+            ],
+            miniVariant: false,
+            title: "HWR All-In-One"
+        };
+    },
+    components: { 
+      DropdownList, 
     }
-  }
 }
 </script> 
 
 <style lang="scss">
-  .v-navigation-drawer{
+.v-navigation-drawer {
     display: flex;
     flex-direction: column;
-  
     background-color: var(--dark);
     color: var(--light);
 
-    .logo {
-      position: relative;
-      margin:0 0 50px;
-      padding: 0.5rem;
-      background:rgba(255,255,255,0);
-      opacity: 5;
+  .logo {
+    position: relative;
+    margin:0 0 50px;
+    padding: 0.5rem;
+    background:rgba(255,255,255,0);
+    opacity: 5;
       
-
-      img {
-        height:2rem;
-        width:2rem;
-      }
-      
+    img {
+      height:2rem;
+      width:2rem;
     }
+  }
 }
 </style>
