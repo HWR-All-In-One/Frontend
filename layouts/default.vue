@@ -1,11 +1,12 @@
 <template>
-  <v-app light>
+  
+  <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
-      :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
+      light
     >
       <v-list>
         <v-list-item
@@ -24,9 +25,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-main>
         <UsernameField/>
-      </v-main>
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
@@ -58,7 +57,11 @@ import PasswordField from '~/components/PasswordField.vue';
 import TxtInputs from '~/components/UsernameField.vue';
 import BarUsername from '~/components/UsernameField.vue';
 
+
+
 export default {
+
+
     name: "DefaultLayout",
     data() {
         return {
@@ -83,6 +86,5 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { PasswordField }
 }
 </script>
