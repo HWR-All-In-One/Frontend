@@ -5,6 +5,9 @@
   </div>
 </template>
 
+<--!   <div @click="openDialog(item) class="item.name"  -->     
+
+
 <script>
 export default {
   data: () => ({
@@ -30,6 +33,7 @@ export default {
                         name: '1. Semester',
                         children: [
                           {
+
                             id: 60000, 
                             name: 'Kurs A',
                             link:'#'

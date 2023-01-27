@@ -1,5 +1,5 @@
-<template>
-  <v-app dark>
+s<template>
+  <v-app>
     <v-navigation-drawer
       permanent
       mini-variant
@@ -9,7 +9,7 @@
       
       <v-list>  
         <div class="logo">
-          <img src="../assets/HWR-lOGO-3.png" alt="HWR-APP-logo">
+          <img src="../assets/HWR-lOGO-3-with-bear-symbol-small-lightmode.svg" alt="HWR-APP-logo">
         </div>
 
         <v-list-item
@@ -27,22 +27,13 @@
       </v-list>
 
     </v-navigation-drawer>
-
-    <v-app-bar
-      fixed
-      app
-    >
-      <v-toolbar-title
-      >{{ title }}
-      </v-toolbar-title>
-    </v-app-bar>
-
+      
     <v-main>
       <v-container>
         <DropdownList />
       </v-container>
     </v-main>
-
+  
     <v-row>
       <v-btn
         :loading="loading3"
@@ -122,33 +113,64 @@ export default {
 </script> 
 
 <style lang="scss">
-  .v-navigation-drawer{
-    display: flex;
-    flex-direction: column;
-    block-size: max-content;
-    background-color: #000000;
+
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+    background-color: transparent;
+}
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+    background-color: transparent;
+    border:none;
+}
+  .theme--dark.v-navigation-drawer {
+    background-color: grey;
+    border: none;
+    
 
     .logo {
       position: relative;
-      margin:0 0 50px;
-      padding: 0.5rem;
+      margin:auto;
+      
+      padding: auto;
       background:rgba(255,255,255,0);
+      opacity: 6;
+      
+      img {
+        height:3rem;
+        width:3rem;
+      }
+    }
+  }
+
+  .theme--light.v-navigation-drawer {
+    background-color: transparent;
+    border: none;
+    
+
+    .logo {
+      position: relative;
+      margin:0 0;
+      padding: 0.5rem;
+      
       opacity: 5;
       
       img {
-        height:3.5rem;
-        width:3.5rem;
+        height:3rem;
+        width:3rem;
       }
     }
   }
 
   .theme--dark.v-footer {
-    background-color: #000000;
+    background-color: transparent;
+  }
+
+  .theme--light.v-footer {
+    background-color: transparent;
   }
   
   .v-toolbar__title, .v-toolbar__content{
     block-size: max-content;
-    background-color: #000000;
+    
   }
 
  .row{
