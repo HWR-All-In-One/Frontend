@@ -53,10 +53,6 @@
 </template>
 
 <script>
-import PasswordField from '~/components/PasswordField.vue';
-import TxtInputs from '~/components/UsernameField.vue';
-import BarUsername from '~/components/UsernameField.vue';
-
 
 
 export default {
