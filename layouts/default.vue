@@ -9,7 +9,7 @@ s<template>
       
       <v-list>  
         <div class="logo">
-          <img src="../assets/HWR-lOGO-3-with-bear-symbol-small-lightmode.svg" alt="HWR-APP-logo">
+          <img src="../assets/HWR-AIO-lOGO.svg" alt="HWR-APP-logo">
         </div>
 
         <v-list-item
@@ -128,7 +128,7 @@ export default {
 
     .logo {
       position: relative;
-      margin:auto;
+      margin-left:0.3rem;
       
       padding: auto;
       background:rgba(255,255,255,0);
@@ -148,8 +148,9 @@ export default {
 
     .logo {
       position: relative;
-      margin:0 0;
-      padding: 0.5rem;
+      margin-left:auto;
+      margin:0 0 0 1rem;padding: 0.5rem;
+      border-left: 1rem;
       
       opacity: 5;
       
