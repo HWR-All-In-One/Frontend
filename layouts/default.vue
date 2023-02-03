@@ -34,44 +34,7 @@ s<template>
       </v-container>
     </v-main>
   
-    <v-row>
-      <v-btn
-        :loading="loading3"
-        :disabled="loading3"
-        color="blue-grey"
-        class="button1"
-        @click="loader = 'loading3'"
-      >
-        Heute
-      </v-btn>
-      <v-btn
-        :loading="loading3"
-        :disabled="loading3"
-        color="blue-grey"
-        class="button2"
-        @click="loader = 'loading3'"
-      >
-        Wochen
-      </v-btn>
-      <v-btn
-        :loading="loading3"
-        :disabled="loading3"
-        color="blue-grey"
-        class="button3"
-        @click="loader = 'loading3'"
-      >
-        Monate
-      </v-btn>
-      <v-btn
-        :loading="loading3"
-        :disabled="loading3"
-        color="blue-grey"
-        class="button4"
-        @click="loader = 'loading3'"
-      >
-        Jahr
-      </v-btn>
-    </v-row>
+
   
     <v-footer app bottom fixed style="width: max-content;" padless>
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -174,23 +137,6 @@ export default {
     
   }
 
- .row{
-  margin: auto 1rem auto auto;
-  flex: initial;
-  height: max-content;
- }
 
- .button1 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 30px 60px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: auto 1rem 1rem auto;
-  cursor: pointer;
-}
 
 </style>
