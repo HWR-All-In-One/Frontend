@@ -11,7 +11,7 @@
       app
     >
       <v-list>
-       <div class="logo">
+        <div class="logo">
           <img src="../assets/HWR-AIO-lOGO.svg" alt="HWR-APP-logo" />
         </div>
         <v-list-item
@@ -45,7 +45,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app style="width: max-content;">
+    <v-footer fixed app style="width: max-content;">
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-name: "app",
+  name: "app",
   name: "DefaultLayout",
   data() {
     return {
@@ -61,10 +61,10 @@ name: "app",
       drawer: false,
       fixed: false,
       items: [
-         {
+        {
           icon: "mdi-account",
           title: "Account",
-          to: "/account"
+          to: "../pages/account.vue"
         },
         {
           icon: "mdi-calendar-multiple",
@@ -74,15 +74,15 @@ name: "app",
         {
           icon: "mdi-email",
           title: "mail",
-          to: "/mail"
-        },
+          to: "../pages/mail.vue"
+        }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "HWR All-In-One",
+      title: "HWR All-In-One"
     };
-  },
+  }
 };
 </script>
 
@@ -91,16 +91,16 @@ name: "app",
   background-color: transparent;
 }
 
-.v-list .v-list-item--active
-{
-    margin-top:5rem;
+.v-list .v-list-item--active {
+  margin-top: 10rem;
 }
+
 .v-navigation-drawer {
   background-color: #363636;
 
   .logo {
     position: relative;
-    
+
     background: rgba(255, 255, 255, 0);
 
     img {
@@ -109,7 +109,6 @@ name: "app",
     }
   }
 }
-
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating)
   .v-navigation-drawer__border {
@@ -120,18 +119,17 @@ name: "app",
   width: 0.12rem;
 }
 
-
 .v-icon.v-icon {
   font-size: 2.1rem;
+  color: #d50b2e;
 }
 
 .theme--dark.v-footer {
   background-color: transparent;
+  color: #d50b2e;
 }
 
 .theme--light.v-footer {
   background-color: transparent;
 }
-
-
 </style>

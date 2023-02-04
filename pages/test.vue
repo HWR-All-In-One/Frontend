@@ -14,6 +14,15 @@
 
         <!-- A -->
 
+        <div class="component">
+            <h2 class="component-title">
+                Dropdown List - Alert.vue
+            </h2>
+            <div class="component-box">
+                <Alert/>
+            </div>
+            <br/>
+        </div>
 
 
         <!-- B -->
@@ -26,6 +35,16 @@
 
         <!-- D -->
 
+        
+        <div class="component">
+            <h2 class="component-title">
+                Dropdown List - DropdownList.vue
+            </h2>
+            <div class="component-box">
+                <DropdownList/>
+            </div>
+            <br/>
+        </div>
 
 
         <!-- E -->
