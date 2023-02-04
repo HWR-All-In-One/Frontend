@@ -16,7 +16,7 @@
 
         <div class="component">
             <h2 class="component-title">
-                Dropdown List - Alert.vue
+                Pop-Up Meldungen - Alert.vue
             </h2>
             <div class="component-box">
                 <Alert/>
@@ -175,11 +175,13 @@
 </template>
   
 <script>
+import Alert from '~/components/Alert.vue';
 import Schedule from '~/components/Schedule.vue';
 
 export default {
     name: "TestLayout",
     components: { 
+        Alert,
         Schedule
     }
 }
@@ -206,6 +208,7 @@ export default {
 
 .component {
     display: flex;
+    margin-bottom: 30px;
     background-color: white;
     border-radius: 30px;
     flex-direction: column;
