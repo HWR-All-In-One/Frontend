@@ -92,3 +92,6 @@ sw.*
 # Yarn
 .yarn/
 .yarnrc.yml
+
+# Visual Studio Code
+.vscode/*

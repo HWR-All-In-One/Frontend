@@ -14,6 +14,15 @@
 
         <!-- A -->
 
+        <div class="component">
+            <h2 class="component-title">
+                Pop-Up Meldungen - Alert.vue
+            </h2>
+            <div class="component-box">
+                <Alert/>
+            </div>
+            <br/>
+        </div>
 
 
         <!-- B -->
@@ -26,6 +35,16 @@
 
         <!-- D -->
 
+        
+        <div class="component">
+            <h2 class="component-title">
+                Dropdown List - DropdownList.vue
+            </h2>
+            <div class="component-box">
+                <DropdownList/>
+            </div>
+            <br/>
+        </div>
 
 
         <!-- E -->
@@ -98,11 +117,19 @@
 
         <!-- T -->
 
-
+        
 
         <!-- U -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Benutzerkonto Anmeldepanel Nr. 1 - UsernameField.vue
+            </h2>
+            <div class="component-box">
+                <UsernameField/>
+            </div>
+            <br/>
+        </div>
 
         <!-- V -->
 
@@ -156,13 +183,19 @@
 </template>
   
 <script>
+import Alert from '~/components/Alert.vue';
+import DropdownList from '~/components/DropdownList.vue';
 import Schedule from '~/components/Schedule.vue';
+import UsernameField from '~/components/UsernameField.vue';
 
 export default {
     name: "TestLayout",
-    components: { 
-        Schedule
-    }
+    components: {
+    Alert,
+    Schedule,
+    DropdownList,
+    UsernameField
+}
 }
 </script>
 
@@ -187,6 +220,7 @@ export default {
 
 .component {
     display: flex;
+    margin-bottom: 30px;
     background-color: white;
     border-radius: 30px;
     flex-direction: column;
