@@ -7,12 +7,14 @@
             <v-btn color="primary" nuxt to="/test">
                 Komponentenbibliothek
             </v-btn>
+            <v-btn color="primary" nuxt to="/login">
+                Login
+            </v-btn>
         </div>
     </v-app>
 </template>
 
 <script>
-
 export default {
     name: 'IndexPage',
 }
