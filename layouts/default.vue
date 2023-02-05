@@ -1,19 +1,23 @@
 <template>
     <v-app dark>
-        <v-navigation-drawer permanent miniVariant mini-variant-width="5.3rem" v-model="drawer"
+        <v-navigation-drawer class="navigation-bar" permanent miniVariant v-model="drawer"
             :mini-variant="miniVariant" :clipped="clipped" fixed app>
             <v-list>
                 <div class="logo">
                     <a class="home-link" href="/">
-                        <img src="../assets/HWR-AIO-lOGO.svg" alt="HWR-APP-logo" />
+                        <img src="~/assets/images/hwr_logo.svg" alt="HWR-APP-logo" />
                     </a>
                 </div>
                 <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
                     <v-list-item-action>
-                        <v-icon>{{ item.icon }}</v-icon>
+                        <v-icon>
+                            {{ item.icon }}
+                        </v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        <v-list-item-title>
+                            {{ item.title }}
+                        </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -68,6 +72,10 @@ export default {
 </script>
 
 <style lang="scss">
+.navigation-bar {
+    width: 5.3rem;
+}
+
 .theme--dark.v-app-bar.v-toolbar.v-sheet {
     background-color: transparent;
 }

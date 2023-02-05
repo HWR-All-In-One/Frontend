@@ -20,12 +20,12 @@
                 label="Benutzer"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
-            <a class="forgot-password-link" href="/">
-                Passwort vergessen?
+            <a class="forgot-user-link" href="/">
+                Benutzer vergessen?
             </a>
         </div>
         <div class="login-panel-bottom">
-            <v-btn class="create-account-button" to="/">
+            <v-btn class="create-account-button" secondary to="/">
                 Konto erstellen
             </v-btn>
             <v-btn class="continue-button">
@@ -83,7 +83,7 @@
     background-color: #fff;
 }
 
-.forgot-password-link {
+.forgot-user-link {
     margin-bottom: 30px;
 }
 
@@ -96,6 +96,7 @@
 
 .create-account-button {
     width: 49%;
+    color: #D50B2E;
 }
 
 .continue-button {
