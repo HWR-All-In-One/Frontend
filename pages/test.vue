@@ -117,11 +117,19 @@
 
         <!-- T -->
 
-
+        
 
         <!-- U -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Benutzerkonto Anmeldepanel Nr. 1 - UsernameField.vue
+            </h2>
+            <div class="component-box">
+                <UsernameField/>
+            </div>
+            <br/>
+        </div>
 
         <!-- V -->
 
@@ -176,14 +184,18 @@
   
 <script>
 import Alert from '~/components/Alert.vue';
+import DropdownList from '~/components/DropdownList.vue';
 import Schedule from '~/components/Schedule.vue';
+import UsernameField from '~/components/UsernameField.vue';
 
 export default {
     name: "TestLayout",
-    components: { 
-        Alert,
-        Schedule
-    }
+    components: {
+    Alert,
+    Schedule,
+    DropdownList,
+    UsernameField
+}
 }
 </script>
 

@@ -1,95 +1,104 @@
 <template>
-    <div class="box">
-      <div class="text-box">
-        <h1 style="color:red"> HWR Student Portal </h1>
-        <img src="~/assets/baer.jpeg" height="50%" >
-        <h2> Anmeldung </h2>
-        <h3> Weiter zum Userspace </h3>
-      </div>
-      <div class="userbar">
-              <v-text-field
+    <div class="login-panel">
+        <div class="login-panel-top">
+            <h1 class="first-title"> 
+                HWR Student Portal 
+            </h1>
+            <img class="bear-image" src="~/assets/images/hwr_bear.png">
+            <h2 class="second-title"> 
+                Anmeldung 
+            </h2>
+            <h3 class="third-title"> 
+                Zum Benutzerkonto 
+            </h3>
+        </div>
+        <div class="login-panel-middle">
+            <v-text-field class="username-input"
                 hide-details
-                single-linenpm
-                filled
-                outlined
-                label = "Benutzer"
-                hint ="Dein Nutzername von Moodle"
-              >
+                single-linenpm 
+                filled outlined 
+                label="Benutzer"
+                hint="Dein Nutzername von Moodle">
             </v-text-field>
-      </div>
-      <a href="#">Forgot your password?</a>
-        <v-btn class="buttonCreate">button</v-btn>
-
-
-        <v-btn class="buttonContinue">
-          Continue
-        </v-btn>
+            <a class="forgot-password-link" href="/">
+                Passwort vergessen?
+            </a>
+        </div>
+        <div class="login-panel-bottom">
+            <v-btn class="create-account-button" to="/">
+                Konto erstellen
+            </v-btn>
+            <v-btn class="continue-button">
+                Bestätigen
+            </v-btn>
+        </div>
     </div>
 </template>
 
 <style>
-
-a{
-  align-self: flex-start;
-  margin-left: 11%;
-
+.login-panel {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 1px solid #D50B2E;
+    border-radius: 15px;
 }
 
-.reihe{
-  position: relative;
-  
+.login-panel-top {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
-.buttonCreate{
-  position: relative;
-  text-align: center;
-  align-self: center;
-  width: 80%;
+.first-title {
+    margin-bottom: 30px;
+    color: #D50B2E;
 }
 
-.buttonContinue{
-  line-height: 1.25;
-  background: #FC6E51;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  position: relative;
-  transition: background-color .6s ease;
-  overflow: hidden;
-  width:80%;
-  align-self: center;
-  margin-bottom: 1%;
-}
-  
-
-
-.box{
-  position: fixed;
-  display:flex; 
-  justify-content: space-evenly;
-  flex-flow: column wrap;
-  text-align: center;
-  align-self: center;
-  width: 25%;
-  height: 65%;
-  border-style: solid;
-  border-radius: 2ch;
-  border-color: #D50B2E;
+.bear-image {
+    width: 25%;
+    height: 45%;
+    margin-bottom: 30px;
+    align-self: center;
 }
 
-.userbar{
-  text-align: center;
-  align-self: center;
-  height: 10%;
-  width: 80%
+.second-title {
+    align-self: center;
+    margin-bottom: 15px;
 }
 
-.text-box{
-  line-height: 2;
+.third-title {
+    align-self: center;
+    margin-bottom: 30px;
 }
 
+.login-panel-middle {
+    display: flex;
+    flex-direction: column;
+}
 
+.username-input {
+    background-color: #fff;
+}
 
+.forgot-password-link {
+    margin-bottom: 30px;
+}
+
+.login-panel-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.create-account-button {
+    width: 49%;
+}
+
+.continue-button {
+    width: 49%;
+}
 </style>

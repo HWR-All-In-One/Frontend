@@ -3,7 +3,7 @@
     <div class="LoginButton" >
       <div id="inspire">
         <v-btn block class="button">
-          Continue
+          Bestätigen
         </v-btn>
       </div>
     </div>
@@ -15,9 +15,8 @@
 </script>
 
 <style>
-
 .button{
-  height: 5%
+  height: 5%;
 }
 
 .flex-box {
@@ -25,11 +24,10 @@
 	justify-content: space-around;
 }
 
-
 .LoginButton{
+  width: 20%;
+  height: 20%;
   text-align: center;
   align-self: center;
-  height: 20%;
-  width: 20%;
 }
 </style>
