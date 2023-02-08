@@ -1,9 +1,9 @@
 <template>    
-    <PasswordInput/>
+    <PasswordPanel/>
 </template>
 
 <script>
-import PasswordInput from '~/components/PasswordInput.vue';
+import PasswordInput from '~/components/PasswordPanel.vue';
 
 export default {
     name: "DefaultLayout",

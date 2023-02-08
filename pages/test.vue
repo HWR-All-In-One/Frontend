@@ -95,19 +95,13 @@
 
         <div class="component">
             <h2 class="component-title">
-                Password Eingabe - PasswordInput.vue
+                Password Eingabe - PasswordPanel.vue
             </h2>
             <div class="component-box">
-                <PasswordInput/>
+                <PasswordPanel/>
             </div>
             <br/>
-            <!-- 
-                Kopiere dir die Kompenentenvorlage aus dem "Default Component"-Bereich und 
-                füge sie in alphabetischer Reihenfolge der Komponentenbibliothek im "Component Library"-Bereich hinzu.
-            -->
         </div> 
-
-
 
         <!-- Q -->
 
@@ -115,7 +109,15 @@
 
         <!-- R -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Registrierung - RegistrationPanel.vue
+            </h2>
+            <div class="component-box">
+                <RegistrationPanel/>
+            </div>
+            <br/>
+        </div> 
 
         <!-- S -->
 
@@ -137,10 +139,10 @@
 
         <div class="component">
             <h2 class="component-title">
-                Benutzerkonto Anmeldepanel Nr. 1 - UsernameField.vue
+                Benutzerkonto Anmeldepanel Nr. 1 - UsernamePanel.vue
             </h2>
             <div class="component-box">
-                <UsernameField/>
+                <UsernamePanel/>
             </div>
             <br/>
         </div>
@@ -200,7 +202,7 @@
 import Alert from '~/components/Alert.vue';
 import DropdownList from '~/components/DropdownList.vue';
 import Schedule from '~/components/Schedule.vue';
-import UsernameField from '~/components/UsernameField.vue';
+import UsernameField from '~/components/UsernamePanel.vue';
 
 export default {
     name: "TestLayout",

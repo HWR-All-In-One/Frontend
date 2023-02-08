@@ -13,22 +13,22 @@
             </h3>
         </div>
         <div class="login-panel-middle">
-            <v-text-field class="password-input"
+            <v-text-field class="username-input"
                 hide-details
                 single-linenpm 
                 filled outlined 
-                label="Passwort"
-                hint="Dein Passwort von Moodle">
+                label="Benutzer"
+                hint="Dein Nutzername von Moodle">
             </v-text-field>
-            <a class="forgot-password-link" href="/">
-                Passwort vergessen?
+            <a class="forgot-user-link" href="/">
+                Benutzer vergessen?
             </a>
         </div>
         <div class="login-panel-bottom">
             <v-btn class="create-account-button" secondary to="/">
                 Konto erstellen
             </v-btn>
-            <v-btn class="continue-to-userspace-button">
+            <v-btn class="continue-button" to="/login/password" >
                 Bestätigen
             </v-btn>
         </div>
@@ -37,7 +37,8 @@
 
 <style>
 .login-panel {
-    width: 50%;
+    width: 40%;
+    height: 80%;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -53,25 +54,25 @@
 }
 
 .first-title {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #D50B2E;
 }
 
 .bear-image {
-    width: 25%;
-    height: 45%;
-    margin-bottom: 30px;
+    width: 37.5%;
+    height: 67.5%;
+    margin-bottom: 50px;
     align-self: center;
 }
 
 .second-title {
     align-self: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .third-title {
     align-self: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .login-panel-middle {
@@ -79,11 +80,13 @@
     flex-direction: column;
 }
 
-.password-input {
+.username-input {
     background-color: #fff;
+    border: 1px solid #D50B2E;
 }
 
-.forgot-password-link {
+.forgot-user-link {
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -96,10 +99,12 @@
 
 .create-account-button {
     width: 49%;
+    height: 40px !important;
     color: #D50B2E;
 }
 
-.continue-to-userspace-button {
+.continue-button {
     width: 49%;
+    height: 40px !important
 }
 </style>

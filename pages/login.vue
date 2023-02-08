@@ -1,6 +1,7 @@
 <template>
     <v-app dark>
         <NuxtLink to="/login/username">Anmelden</NuxtLink>
+        <NuxtLink to="/registration">Account erstellen</NuxtLink>
         <NuxtChild />
         <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
             <v-list>
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import UsernameField from '~/components/UsernameField.vue';
+import UsernameField from '~/components/UsernamePanel.vue';
 
 export default {
     name: "DefaultLayout",
