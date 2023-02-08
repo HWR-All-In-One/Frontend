@@ -93,6 +93,20 @@
 
         <!-- P -->
 
+        <div class="component">
+            <h2 class="component-title">
+                Password Eingabe - PasswordInput.vue
+            </h2>
+            <div class="component-box">
+                <PasswordInput/>
+            </div>
+            <br/>
+            <!-- 
+                Kopiere dir die Kompenentenvorlage aus dem "Default Component"-Bereich und 
+                füge sie in alphabetischer Reihenfolge der Komponentenbibliothek im "Component Library"-Bereich hinzu.
+            -->
+        </div> 
+
 
 
         <!-- Q -->
