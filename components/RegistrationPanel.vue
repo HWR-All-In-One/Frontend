@@ -47,7 +47,7 @@
             <v-checkbox class="panel-toa-checkbox">
                 <template v-slot:label>
                     <div>
-                        Aktzeptierst du die 
+                        Akzeptierst du die 
                         <a href="/"> 
                         allgemeinen Geschäftsbedingungen
                         </a> 
@@ -62,7 +62,6 @@
             </v-btn>
         </div>
         <div class="create-account-panel-bottom">
-
         </div>
     </div>
 </template>
@@ -70,7 +69,7 @@
 <style>
 .create-account-panel {
     width: 40%;
-    height: 100%;
+    height: 95%;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -105,7 +104,6 @@
 .create-account-panel-middle {
     display: flex;
     flex-direction: column;
-    
 }
 
 .email-create-input {
@@ -114,10 +112,18 @@
     border: 1px solid #D50B2E;
 }
 
+.email-create-input input{
+    color: black !important;
+}
+
 .username-create-input {
     margin-bottom: 25px !important;
     background-color: #fff;
     border: 1px solid #D50B2E;
+}
+
+.username-create-input input {
+    color:black !important;
 }
 
 
@@ -127,10 +133,18 @@
     border: 1px solid #D50B2E;
 }
 
+.password-create-input input {
+    color: black !important;
+}
+
 .password2-create-input {
     margin-bottom: 25px !important;
     background-color: #fff;
     border: 1px solid #D50B2E;
+}
+
+.password2-create-input input {
+    color: black !important;
 }
 
 .create-account-panel-bottom {
@@ -142,7 +156,7 @@
 }
 
 .panel-toa{
-
+    
 }
 
 .panel-toa-checkbox{
@@ -152,7 +166,7 @@
 
 .continue-button {
     width: 49%;
-    height: 40px !important
+    height: 40px !important;
 }
 </style>
 

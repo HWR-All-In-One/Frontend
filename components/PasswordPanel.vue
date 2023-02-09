@@ -37,7 +37,8 @@
 
 <style>
 .password-panel {
-    width: 50%;
+    width: 40%;
+    height: 80%;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -85,6 +86,7 @@
 }
 
 .forgot-password-link {
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
