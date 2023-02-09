@@ -61,17 +61,18 @@ export default {
       items: [
         {
           icon: "mdi-account",
-          title: "Benutzerkonto",
+          alt: "Benutzerkonto",
           to: "/account"
         },
         {
           icon: "mdi-calendar-multiple",
-          title: "Kalender",
+          type: "image/icon type",
+          alt: "Kalender",
           to: "/calendar"
         },
         {
           icon: "mdi-email",
-          title: "Email-Postfach",
+          alt: "Email-Postfach",
           to: "/mail"
         }
       ]
