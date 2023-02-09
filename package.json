@@ -12,10 +12,12 @@
     "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
   },
   "dependencies": {
-    "@iconify-icons/ep": "^1.2.10",
-    "@iconify/vue": "^4.0.2",
+    "@esm2cjs/escape-string-regexp": "^5.0.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "chalk": "^5.2.0",
     "core-js": "^3.25.3",
+    "escape-string-regexp": "^5.0.0",
+    "node-fetch": "^3.3.0",
     "nuxt": "^2.15.8",
     "vee-validate": "3",
     "vue": "^2.7.10",
