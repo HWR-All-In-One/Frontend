@@ -1,10 +1,9 @@
 <template>
-    <div @click="selectNode" class="menu-item">
-        <v-treeview :items="items"></v-treeview>
-    </div>
+  <v-treeview
+    selectable
+    :items="items"
+    @onclick="onSelected"></v-treeview>
 </template>
-
-<div @click="openDialog(item) class="item.name"></div>
 
 <script>
 export default {

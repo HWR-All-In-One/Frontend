@@ -23,41 +23,42 @@
           exact
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon>
+              {{ item.icon }}
+            </v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <div class="theme-toggle-box">
-          <v-switch
-            class="theme-toggle"
-            v-model="$vuetify.theme.dark"
-            inset
-            persistent-hint
-          />
-        </div>
-      </v-list>
-    </v-navigation-drawer>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer>
-      <v-list>
         <v-list-item>
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer</v-list-item-title>
-        </v-list-item>
+          <div class="theme-toggle-box">
+            <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset persistent-hint />
+          </div>  
+        </v-list-item>              
       </v-list>
-    </v-navigation-drawer>
-    <v-footer class="footer" fixed app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+     </v-navigation-drawer>
+        <v-main>
+            <v-container>
+                <Nuxt />
+            </v-container>
+        </v-main>
+        <v-navigation-drawer>
+            <v-list>
+                <v-list-item>
+                    <v-list-item-action>
+                        <v-icon light> mdi-repeat </v-icon>
+                    </v-list-item-action>
+                    <v-list-item-title>Switch drawer</v-list-item-title>
+                </v-list-item>
+            </v-list>
+        </v-navigation-drawer>
+        <v-footer class="footer" fixed app>
+            <span>&copy; {{ new Date().getFullYear() }}</span>
+        </v-footer>
+    </v-app>
 </template>
 
 <script>
