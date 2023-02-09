@@ -30,7 +30,7 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
 .my-4.info {
     opacity: 0.22;
 }

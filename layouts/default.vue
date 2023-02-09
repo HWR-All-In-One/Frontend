@@ -23,18 +23,23 @@
           exact
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon>
+              {{ item.icon }}
+            </v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-                <div class="theme-toggle-box">
-                    <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset
-                        persistent-hint />
-                </div>
-            </v-list>
-        </v-navigation-drawer>
+        <v-list-item>
+          <div class="theme-toggle-box">
+            <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset persistent-hint />
+          </div>  
+        </v-list-item>              
+      </v-list>
+     </v-navigation-drawer>
         <v-main>
             <v-container>
                 <Nuxt />
@@ -58,29 +63,29 @@
 
 <script>
 export default {
-    name: "app",
-    name: "DefaultLayout",
-    data() {
-        return {
-            items: [
-                {
-                    icon: "mdi-account",
-                    title: "Benutzerkonto",
-                    to: "/account"
-                },
-                {
-                    icon: "mdi-calendar-multiple",
-                    title: "Kalender",
-                    to: "/calendar"
-                },
-                {
-                    icon: "mdi-email",
-                    title: "Email-Postfach",
-                    to: "/mail"
-                }
-            ],
-        };
-    }
+  name: "app",
+  name: "DefaultLayout",
+  data() {
+    return {
+      items: [
+        {
+          icon: "mdi-account",
+          title: "Benutzerkonto",
+          to: "/account"
+        },
+        {
+          icon: "mdi-calendar-multiple",
+          title: "Kalender",
+          to: "/calendar"
+        },
+        {
+          icon: "mdi-email",
+          title: "Email-Postfach",
+          to: "/mail"
+        }
+      ]
+    };
+  }
 };
 </script>
 
