@@ -1,7 +1,7 @@
 <template>
     <v-app dark>
-        <v-navigation-drawer class="navigation-bar" permanent miniVariant v-model="drawer"
-            :mini-variant="miniVariant" :clipped="clipped" fixed app>
+        <v-navigation-drawer class="navigation-bar" permanent miniVariant v-model="drawer" :mini-variant="miniVariant"
+            :clipped="clipped" fixed app>
             <v-list>
                 <div class="logo">
                     <a class="home-link" href="/">
@@ -20,6 +20,10 @@
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <div class="theme-toggle-box">
+                    <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset
+                        persistent-hint />
+                </div>
             </v-list>
         </v-navigation-drawer>
         <v-main>

@@ -35,7 +35,7 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
 .login-panel {
     width: 40%;
     height: 80%;
@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid #D50B2E;
+    border: 1px solid $hwr-color-red;
     border-radius: 15px;
 }
 
@@ -54,8 +54,9 @@
 }
 
 .first-title {
-    margin-bottom: 40px;
-    color: #D50B2E;
+    margin-bottom: 30px;
+    color: $hwr-color-red;
+    font-size: 30px;
 }
 
 .bear-image {
@@ -99,12 +100,11 @@
 
 .create-account-button {
     width: 49%;
-    height: 40px !important;
-    color: #D50B2E;
+    border: 1px solid $hwr-color-red !important;
 }
 
 .continue-button {
     width: 49%;
-    height: 40px !important
+    border: 1px solid $hwr-color-red !important;
 }
 </style>
