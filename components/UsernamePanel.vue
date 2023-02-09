@@ -4,7 +4,7 @@
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
-            <img class="bear-image" src="~/assets/images/hwr_bear.png">
+            <img class="bear-image" src="~/assets/images/Bear.png">
             <h2 class="second-title"> 
                 Anmeldung 
             </h2>
