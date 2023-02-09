@@ -29,55 +29,58 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer>
-      <v-list>
-        <v-list-item>
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer class="footer" fixed app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+                <div class="theme-toggle-box">
+                    <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset
+                        persistent-hint />
+                </div>
+            </v-list>
+        </v-navigation-drawer>
+        <v-main>
+            <v-container>
+                <Nuxt />
+            </v-container>
+        </v-main>
+        <v-navigation-drawer>
+            <v-list>
+                <v-list-item>
+                    <v-list-item-action>
+                        <v-icon light> mdi-repeat </v-icon>
+                    </v-list-item-action>
+                    <v-list-item-title>Switch drawer</v-list-item-title>
+                </v-list-item>
+            </v-list>
+        </v-navigation-drawer>
+        <v-footer class="footer" fixed app>
+            <span>&copy; {{ new Date().getFullYear() }}</span>
+        </v-footer>
+    </v-app>
 </template>
 
 <script>
 export default {
-  name: "app",
-  name: "DefaultLayout",
-  data() {
-    return {
-      items: [
-        {
-          icon: "mdi-account",
-          alt: "Benutzerkonto",
-          to: "/account"
-        },
-        {
-          icon: "mdi-calendar-multiple",
-          type: "image/icon type",
-          alt: "Kalender",
-          to: "/calendar"
-        },
-        {
-          icon: "mdi-email",
-          alt: "Email-Postfach",
-          to: "/mail"
-        }
-      ]
-    };
-  }
+    name: "app",
+    name: "DefaultLayout",
+    data() {
+        return {
+            items: [
+                {
+                    icon: "mdi-account",
+                    title: "Benutzerkonto",
+                    to: "/account"
+                },
+                {
+                    icon: "mdi-calendar-multiple",
+                    title: "Kalender",
+                    to: "/calendar"
+                },
+                {
+                    icon: "mdi-email",
+                    title: "Email-Postfach",
+                    to: "/mail"
+                }
+            ],
+        };
+    }
 };
 </script>
 
@@ -98,6 +101,7 @@ export default {
     }
   }
 }
+
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating)
   .v-navigation-drawer__border {
   background-color: #d50b2e;
