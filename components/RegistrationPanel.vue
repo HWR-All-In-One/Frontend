@@ -4,7 +4,7 @@
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
-            <img class="bear-image" src="~/assets/images/hwr_bear.png">
+            <img class="bear-image" src="~/assets/images/Bear.png">
             <h2 class="second-title"> 
                 Registrierung 
             </h2>
@@ -41,6 +41,7 @@
                 filled outlined 
                 label="Passwort bestätigen"
                 hint="Dein Passwort von Moodle">
+                
             </v-text-field>
         </div>
         <div class="panel-toa">
@@ -113,7 +114,7 @@
 }
 
 .email-create-input input{
-    color: black !important;
+    
 }
 
 .username-create-input {
@@ -123,7 +124,7 @@
 }
 
 .username-create-input input {
-    color:black !important;
+    /* color:black !important; */
 }
 
 
@@ -134,7 +135,7 @@
 }
 
 .password-create-input input {
-    color: black !important;
+    /* color: black !important; */
 }
 
 .password2-create-input {
@@ -144,7 +145,7 @@
 }
 
 .password2-create-input input {
-    color: black !important;
+    /* color: black !important; */
 }
 
 .create-account-panel-bottom {

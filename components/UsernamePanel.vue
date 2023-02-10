@@ -4,7 +4,7 @@
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
-            <img class="bear-image" src="~/assets/images/hwr_bear.png">
+            <img class="bear-image" src="~/assets/images/Bear.png">
             <h2 class="second-title"> 
                 Anmeldung 
             </h2>
@@ -54,8 +54,9 @@
 }
 
 .first-title {
-    margin-bottom: 40px;
-    color: #D50B2E;
+    margin-bottom: 30px;
+    color: $hwr-color-red;
+    font-size: 30px;
 }
 
 .bear-image {
@@ -99,12 +100,11 @@
 
 .create-account-button {
     width: 49%;
-    height: 40px !important;
-    color: #D50B2E;
+    border: 1px solid $hwr-color-red !important;
 }
 
 .continue-button {
     width: 49%;
-    height: 40px !important
+    border: 1px solid $hwr-color-red !important;
 }
 </style>
