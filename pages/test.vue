@@ -93,7 +93,15 @@
 
         <!-- P -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Password Eingabe - PasswordPanel.vue
+            </h2>
+            <div class="component-box">
+                <PasswordPanel/>
+            </div>
+            <br/>
+        </div> 
 
         <!-- Q -->
 
@@ -101,7 +109,15 @@
 
         <!-- R -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Registrierung - RegistrationPanel.vue
+            </h2>
+            <div class="component-box">
+                <RegistrationPanel/>
+            </div>
+            <br/>
+        </div> 
 
         <!-- S -->
 
@@ -123,10 +139,10 @@
 
         <div class="component">
             <h2 class="component-title">
-                Benutzerkonto Anmeldepanel Nr. 1 - UsernameField.vue
+                Benutzerkonto Anmeldepanel Nr. 1 - UsernamePanel.vue
             </h2>
             <div class="component-box">
-                <UsernameField/>
+                <UsernamePanel/>
             </div>
             <br/>
         </div>
@@ -186,7 +202,7 @@
 import Alert from '~/components/Alert.vue';
 import DropdownList from '~/components/DropdownList.vue';
 import Schedule from '~/components/Schedule.vue';
-import UsernameField from '~/components/UsernameField.vue';
+import UsernameField from '~/components/UsernamePanel.vue';
 
 export default {
     name: "TestLayout",

@@ -1,22 +1,7 @@
 <template>
-    <v-app dark>
-        <NuxtLink to="/login/username">Anmelden</NuxtLink>
-        <NuxtLink to="/registration">Account erstellen</NuxtLink>
-        <NuxtChild />
-        
-        <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-            <v-list>
-                <v-list-item @click.native="right = !right">
-                    <v-list-item-action>
-                        <v-icon light>
-                            mdi-repeat
-                        </v-icon>
-                    </v-list-item-action>
-                    <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-                </v-list-item>
-            </v-list>
-        </v-navigation-drawer>
-    </v-app>
+
+    <UsernamePanel/>
+
 </template>
 
 <script>

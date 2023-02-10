@@ -4,7 +4,7 @@
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
-            <img class="bear-image" src="~/assets/images/hwr_bear.png">
+            <img class="bear-image" src="~/assets/images/Bear.png">
             <h2 class="second-title"> 
                 Anmeldung 
             </h2>
@@ -25,25 +25,30 @@
             </a>
         </div>
         <div class="login-panel-bottom">
-            <v-btn class="create-account-button" secondary to="/">
+            <v-btn class="create-account-button" secondary to="/registration">
                 Konto erstellen
             </v-btn>
-            <v-btn class="continue-button">
+            <v-btn class="continue-button" to="/login/password" >
                 Bestätigen
             </v-btn>
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style>
 .login-panel {
-    width: 50%;
+    width: 40%;
+    height: 80%;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid $hwr-color-red;
+    border: 1px solid #D50B2E;
     border-radius: 15px;
+}
+
+.theme--dark.login-panel{
+    border: 1px solid #00ff37 !important;
 }
 
 .login-panel-top {
@@ -54,25 +59,25 @@
 
 .first-title {
     margin-bottom: 30px;
-    color: $hwr-color-red;
+    color: #D50B2E;
     font-size: 30px;
 }
 
 .bear-image {
-    width: 25%;
-    height: 45%;
-    margin-bottom: 30px;
+    width: 37.5%;
+    height: 67.5%;
+    margin-bottom: 50px;
     align-self: center;
 }
 
 .second-title {
     align-self: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .third-title {
     align-self: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .login-panel-middle {
@@ -82,9 +87,11 @@
 
 .username-input {
     background-color: #fff;
+    border: 1px solid #D50B2E;
 }
 
 .forgot-user-link {
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -97,11 +104,11 @@
 
 .create-account-button {
     width: 49%;
-    border: 1px solid $hwr-color-red !important;
+    border: 1px solid #D50B2E !important;
 }
 
 .continue-button {
     width: 49%;
-    border: 1px solid $hwr-color-red !important;
+    border: 1px solid #D50B2E !important;
 }
 </style>
