@@ -1,6 +1,6 @@
 <template>
-    <div class="password-panel">
-        <div class="password-panel-top">
+    <div class="password-recovery-panel">
+        <div class="password-recovery-panel-top">
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
@@ -12,28 +12,25 @@
                 Zum Benutzerkonto 
             </h3>
         </div>
-        <div class="password-panel-middle">
-            <v-text-field class="password-input"
+        <div class="password-recovery-panel-middle">
+            <v-text-field class="password-recovery-input"
                 hide-details
                 single-linenpm 
                 filled outlined 
-                label="Passwort"
-                hint="Dein Passwort von Moodle">
+                label="Email fuer die Wiederherstellung"
+                hint="Die E-Mail, die ihr angegeben habt">
             </v-text-field>
-            <a class="forgot-password-link" to="/login/forget/password">
-                Passwort vergessen?
-            </a>
         </div>
-        <div class="password-panel-bottom">
-            <v-btn class="continue-to-userspace-button">
-                Bestätigen
+        <div class="password-recovery-panel-bottom">
+            <v-btn class="send-recovery-button">
+                Sende E-Mail
             </v-btn>
         </div>
     </div>
 </template>
 
 <style>
-.password-panel {
+.password-recovery-panel {
     width: 40%;
     height: 80%;
     padding: 50px;
@@ -44,7 +41,7 @@
     border-radius: 15px;
 }
 
-.password-panel-top {
+.password-recovery-panel-top {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -72,12 +69,12 @@
     margin-bottom: 30px;
 }
 
-.password-panel-middle {
+.password-recovery-panel-middle {
     display: flex;
     flex-direction: column;
 }
 
-.password-input {
+.password-recovery-input {
     background-color: #fff;
     border: 1px solid #D50B2E;
 }
@@ -87,20 +84,17 @@
     margin-bottom: 30px;
 }
 
-.password-panel-bottom {
+.password-recovery-panel-bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2%;
+    justify-content: center;
 }
 
-.create-account-button {
+.send-recovery-button {
     width: 49%;
-    height: 40px !important;
-}
-
-.continue-to-userspace-button {
-    width: 49%;
+    margin-top: 30px;
     height: 40px !important;
 }
 </style>

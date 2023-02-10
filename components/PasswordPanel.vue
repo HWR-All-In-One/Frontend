@@ -16,7 +16,7 @@
             <v-text-field class="password-input" hide-details single-linenpm filled outlined label="Passwort"
                 hint="Dein Passwort von Moodle">
             </v-text-field>
-            <a class="forgot-password-link" to="/login/forget/fpassword">
+            <a class="forgot-password-link" href="/login/forget/fpassword">
                 Passwort vergessen?
             </a>
         </div>
