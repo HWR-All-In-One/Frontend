@@ -1,6 +1,6 @@
 <template>
-    <div class="login-panel">
-        <div class="login-panel-top">
+    <div class="password-panel">
+        <div class="password-panel-top">
             <h1 class="first-title"> 
                 HWR Student Portal 
             </h1>
@@ -12,23 +12,20 @@
                 Zum Benutzerkonto 
             </h3>
         </div>
-        <div class="login-panel-middle">
-            <v-text-field class="username-input"
+        <div class="password-panel-middle">
+            <v-text-field class="password-input"
                 hide-details
                 single-linenpm 
                 filled outlined 
-                label="Benutzer"
-                hint="Dein Nutzername von Moodle">
+                label="Passwort"
+                hint="Dein Passwort von Moodle">
             </v-text-field>
-            <a class="forgot-user-link" href="/">
-                Benutzer vergessen?
+            <a class="forgot-password-link" to="/login/forget/password">
+                Passwort vergessen?
             </a>
         </div>
-        <div class="login-panel-bottom">
-            <v-btn class="create-account-button" secondary to="/registration">
-                Konto erstellen
-            </v-btn>
-            <v-btn class="continue-button" to="/login/password" >
+        <div class="password-panel-bottom">
+            <v-btn class="continue-to-userspace-button">
                 Bestätigen
             </v-btn>
         </div>
@@ -36,7 +33,7 @@
 </template>
 
 <style>
-.login-panel {
+.password-panel {
     width: 40%;
     height: 80%;
     padding: 50px;
@@ -47,11 +44,7 @@
     border-radius: 15px;
 }
 
-.theme--dark.login-panel{
-    border: 1px solid #00ff37 !important;
-}
-
-.login-panel-top {
+.password-panel-top {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -60,42 +53,41 @@
 .first-title {
     margin-bottom: 30px;
     color: #D50B2E;
-    font-size: 30px;
 }
 
 .bear-image {
-    width: 37.5%;
-    height: 67.5%;
-    margin-bottom: 50px;
+    width: 25%;
+    height: 45%;
+    margin-bottom: 30px;
     align-self: center;
 }
 
 .second-title {
     align-self: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .third-title {
     align-self: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-.login-panel-middle {
+.password-panel-middle {
     display: flex;
     flex-direction: column;
 }
 
-.username-input {
+.password-input {
     background-color: #fff;
     border: 1px solid #D50B2E;
 }
 
-.forgot-user-link {
+.forgot-password-link {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.login-panel-bottom {
+.password-panel-bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -104,11 +96,11 @@
 
 .create-account-button {
     width: 49%;
-    border: 1px solid #D50B2E !important;
+    height: 40px !important;
 }
 
-.continue-button {
+.continue-to-userspace-button {
     width: 49%;
-    border: 1px solid #D50B2E !important;
+    height: 40px !important;
 }
 </style>

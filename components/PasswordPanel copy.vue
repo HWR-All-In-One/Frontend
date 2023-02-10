@@ -20,12 +20,12 @@
                 label="Passwort"
                 hint="Dein Passwort von Moodle">
             </v-text-field>
-            <a class="forgot-password-link" href="/">
+            <a class="forgot-password-link" to="/login/forget/password">
                 Passwort vergessen?
             </a>
         </div>
         <div class="password-panel-bottom">
-            <v-btn class="create-account-button" secondary to="/">
+            <v-btn class="create-account-button" secondary to="/registration">
                 Konto erstellen
             </v-btn>
             <v-btn class="continue-to-userspace-button">

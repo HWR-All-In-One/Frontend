@@ -3,6 +3,7 @@
         <NuxtLink to="/login/username">Anmelden</NuxtLink>
         <NuxtLink to="/registration">Account erstellen</NuxtLink>
         <NuxtChild />
+        
         <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
             <v-list>
                 <v-list-item @click.native="right = !right">
