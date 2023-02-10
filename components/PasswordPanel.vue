@@ -1,26 +1,22 @@
 <template>
     <div class="password-panel">
         <div class="password-panel-top">
-            <h1 class="first-title"> 
-                HWR Student Portal 
+            <h1 class="first-title">
+                HWR Student Portal
             </h1>
             <img class="bear-image" src="~/assets/images/Bear.png">
-            <h2 class="second-title"> 
-                Anmeldung 
+            <h2 class="second-title">
+                Anmeldung
             </h2>
-            <h3 class="third-title"> 
-                Zum Benutzerkonto 
+            <h3 class="third-title">
+                Zum Benutzerkonto
             </h3>
         </div>
         <div class="password-panel-middle">
-            <v-text-field class="password-input"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Passwort"
+            <v-text-field class="password-input" hide-details single-linenpm filled outlined label="Passwort"
                 hint="Dein Passwort von Moodle">
             </v-text-field>
-            <a class="forgot-password-link" to="/login/forget/password">
+            <a class="forgot-password-link" to="/login/forget/fpassword">
                 Passwort vergessen?
             </a>
         </div>
