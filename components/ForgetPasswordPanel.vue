@@ -32,7 +32,7 @@
 <style lang="scss">
 /* Dark Theme Styling */
 .theme--dark.v-treeview {
-    color: #000;
+    color: $color-dark-mode-grey;
 }
 
 /* Light Theme Styling */
@@ -87,7 +87,7 @@
 }
 
 .password-recovery-input {
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 

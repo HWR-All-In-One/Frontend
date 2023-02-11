@@ -230,7 +230,7 @@ export default {
 /* General Desktop Styling */
 .menu-item {
     display: flex;
-    color: #000;
+    color: $color-dark-mode-grey;
     transition: 0.4s;
 }
 

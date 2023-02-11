@@ -87,7 +87,7 @@
 }
 
 .password-input {
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 

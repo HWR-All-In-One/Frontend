@@ -38,7 +38,7 @@
 <style lang="scss">
 /* Dark Theme Styling */
 .theme--dark.v-label {
-    color: black;
+    color: $color-dark-mode-grey;
 }
 
 .theme--dark.login-panel {
@@ -98,7 +98,7 @@
 }
 
 .username-input {
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 

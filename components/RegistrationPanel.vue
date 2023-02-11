@@ -64,11 +64,11 @@
 <style lang="scss">
 /* Dark Theme Styling */
 .theme--dark.v-label {
-    color: black;
+    color: $color-dark-mode-grey;
 }
 
 .theme--dark.agb-container {
-    color: #fff !important;
+    color: $color-white !important;
 }
 
 /* Light Theme Styling */
@@ -119,24 +119,24 @@
 
 .email-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 
 .username-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 
 .password-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 
 .password2-create-input {
-    background-color: #fff;
+    background-color: $color-white;
     border: 1px solid $color-hwr-red;
 }
 
