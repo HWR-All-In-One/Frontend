@@ -6,6 +6,16 @@
 
 </script>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 
 </style>

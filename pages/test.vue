@@ -210,12 +210,22 @@ export default {
     Alert,
     Schedule,
     DropdownList,
-    UsernameField
+    UsernameField,
 }
 }
 </script>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .main-component {
     display: flex;
     flex-direction: column;
@@ -231,7 +241,7 @@ export default {
     padding-bottom: 10px;
     text-align: center;
     padding-top: 10px;
-    color: black;
+    color: #000;
 }
 
 .component {
@@ -251,6 +261,6 @@ export default {
     width: 90%;
     margin-left: 5%;
     text-align: center;
-    color: black;
+    color: #000;
 }
 </style>

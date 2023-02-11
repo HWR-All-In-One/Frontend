@@ -52,13 +52,12 @@ export default {
         customVariables: ['~/assets/styles/variables.scss'],
         treeShake: true,
         theme: {
-            dark: true,
             themes: {
                 options: {
                     customProperties: true
                 },
                 dark: {
-                    primary: colors.grey,
+                    primary: colors.blue,
                     accent: colors.grey,
                     secondary: colors.white,
                     info: colors.teal.lighten1,
@@ -81,6 +80,5 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        postcss: null,
     }
 }

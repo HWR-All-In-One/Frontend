@@ -20,7 +20,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .main-title {
     padding: 50px 0 25px 0;
 }
