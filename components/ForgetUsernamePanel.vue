@@ -9,7 +9,7 @@
                 Wiederherstellung 
             </h2>
             <h3 class="third-title"> 
-                des Passwords 
+                des Benutzernamens 
             </h3>
         </div>
         <div class="password-recovery-panel-middle">
@@ -17,12 +17,12 @@
                 hide-details
                 single-linenpm 
                 filled outlined 
-                label="Email fuer die Wiederherstellung"
+                label="Email für die Wiederherstellung"
                 hint="Die E-Mail, die ihr angegeben habt">
             </v-text-field>
         </div>
         <div class="password-recovery-panel-bottom">
-            <v-btn class="send-recovery-button" to="/login//forget/passwordsteps">
+            <v-btn class="send-recovery-button" to="/login//forget/usernamesteps">
                 Sende E-Mail
             </v-btn>
         </div>
