@@ -1,7 +1,5 @@
 <template>
-
-    <UsernamePanel/>
-
+    <UsernameField/>
 </template>
 
 <script>
@@ -32,6 +30,22 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { UsernameField }
+    components: { 
+        UsernameField,
+    }
 }
 </script>
+
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
+
+</style>

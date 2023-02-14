@@ -29,7 +29,19 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+.theme--dark.v-treeview {
+    color: $color-dark-mode-grey;
+}
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .password-recovery-panel {
     width: 40%;
     height: 60%;
@@ -39,7 +51,7 @@
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid #D50B2E;
+    border: 1px solid $color-hwr-red;
     border-radius: 15px;
 }
 
@@ -51,7 +63,7 @@
 
 .first-title {
     margin-bottom: 30px;
-    color: #D50B2E;
+    color: $color-hwr-red;
 }
 
 .bear-image {
@@ -76,10 +88,8 @@
 }
 
 .password-recovery-input {
-    background-color: #fff;
-    border: 1px solid #D50B2E;
-    width: 80%;
-    align-self: center;
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
 
 .forgot-password-link {

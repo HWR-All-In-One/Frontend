@@ -20,6 +20,8 @@
                 label="Benutzer"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
+            <a class="forgot-user-link" href="/">
+                Benutzernamen vergessen?
             <a class="forgot-user-link" href="/login/forget/fusername">
                 Benutzer vergessen?
             </a>
@@ -35,20 +37,32 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+.theme--dark.v-label {
+    color: $color-dark-mode-grey;
+}
+
+.theme--dark.login-panel {
+    border: 1px solid #00ff37 !important;
+}
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .login-panel {
-    width: 40%;
-    height: 80%;
+    width: 30rem;
+    height: 35rem;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid #D50B2E;
+    border: 1px solid $color-hwr-red;
     border-radius: 15px;
-}
-
-.theme--dark.login-panel{
-    border: 1px solid #00ff37 !important;
 }
 
 .login-panel-top {
@@ -58,26 +72,26 @@
 }
 
 .first-title {
-    margin-bottom: 30px;
-    color: #D50B2E;
+    margin-bottom: 1rem;
     font-size: 30px;
+    color: $color-hwr-red;
 }
 
 .bear-image {
-    width: 37.5%;
-    height: 67.5%;
-    margin-bottom: 50px;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
     align-self: center;
 }
 
 .second-title {
     align-self: center;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
 }
 
 .third-title {
     align-self: center;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 
 .login-panel-middle {
@@ -86,8 +100,8 @@
 }
 
 .username-input {
-    background-color: #fff;
-    border: 1px solid #D50B2E;
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
 
 .forgot-user-link {
@@ -104,11 +118,11 @@
 
 .create-account-button {
     width: 49%;
-    border: 1px solid #D50B2E !important;
+    border: 1px solid $color-hwr-red !important;
 }
 
 .continue-button {
     width: 49%;
-    border: 1px solid #D50B2E !important;
+    border: 1px solid $color-hwr-red !important;
 }
 </style>

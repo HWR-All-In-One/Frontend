@@ -30,6 +30,22 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { PasswordInput }
+    components: { 
+        PasswordInput,
+    }
 }
 </script>
+
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
+
+</style>

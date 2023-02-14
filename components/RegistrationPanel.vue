@@ -45,17 +45,11 @@
             </v-text-field>
         </div>
         <div class="panel-toa">
-            <v-checkbox class="panel-toa-checkbox">
-                <template v-slot:label>
-                    <div>
-                        Akzeptierst du die 
-                        <a href="/"> 
-                        allgemeinen Geschäftsbedingungen
-                        </a> 
-                        ?
-                    </div>
-                </template>    
-            </v-checkbox>
+            <v-checkbox class="panel-toa-checkbox"/>
+            <div class="agb-container">
+                Akzeptierst du die 
+                <a class="agb-link" href="/">AGB</a>?
+            </div>
             <v-btn  class="continue-button" 
                     to="/" 
                     :disabled="!enabled">
@@ -67,15 +61,31 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
+/* Dark Theme Styling */
+.theme--dark.v-label {
+    color: $color-dark-mode-grey;
+}
+
+.theme--dark.agb-container {
+    color: $color-white !important;
+}
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .create-account-panel {
-    width: 40%;
-    height: 95%;
+    width: 30rem;
+    height: 46.5rem;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid #D50B2E;
+    border: 1px solid $color-hwr-red;
     border-radius: 15px;
 }
 
@@ -86,20 +96,20 @@
 }
 
 .first-title {
-    margin-bottom: 40px;
-    color: #D50B2E;
+    margin-bottom: 1rem;
+    color: $color-hwr-red;
 }
 
 .bear-image {
     width: 25%;
     height: 40%;
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
     align-self: center;
 }
 
 .second-title {
     align-self: center;
-    margin-bottom: 65px;
+    margin-bottom: 2rem;
 }
 
 .create-account-panel-middle {
@@ -109,43 +119,25 @@
 
 .email-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
-    border: 1px solid #D50B2E;
-}
-
-.email-create-input input{
-    
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
 
 .username-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
-    border: 1px solid #D50B2E;
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
-
-.username-create-input input {
-    /* color:black !important; */
-}
-
 
 .password-create-input {
     margin-bottom: 25px !important;
-    background-color: #fff;
-    border: 1px solid #D50B2E;
-}
-
-.password-create-input input {
-    /* color: black !important; */
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
 
 .password2-create-input {
-    margin-bottom: 25px !important;
-    background-color: #fff;
-    border: 1px solid #D50B2E;
-}
-
-.password2-create-input input {
-    /* color: black !important; */
+    background-color: $color-white;
+    border: 1px solid $color-hwr-red;
 }
 
 .create-account-panel-bottom {
@@ -156,18 +148,19 @@
     gap: 2%;
 }
 
-.panel-toa{
-    
-}
-
-.panel-toa-checkbox{
-
-}
-
-
 .continue-button {
     width: 49%;
     height: 40px !important;
+}
+
+.panel-toa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.agb-container {
+    align-self: center;
 }
 </style>
 

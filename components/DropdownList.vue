@@ -1,8 +1,5 @@
 <template>
-  <v-treeview
-    selectable
-    :items="items"
-    @onclick="onSelected"></v-treeview>
+    <v-treeview selectable :items="items" @onclick="onSelected"/>
 </template>
 
 <script>
@@ -218,21 +215,29 @@ export default {
 };
 </script>
 
-<style>
-.menu-item {
-    display: flex;
-    color: #000;
-    transition: 0.4s;
-}
-
+<style lang="scss">
+/* Dark Theme Styling */
 .theme--dark.v-treeview {
     color: #000;
+}
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
+.menu-item {
+    display: flex;
+    color: $color-dark-mode-grey;
+    transition: 0.4s;
 }
 
 .v-treeview-node__root {
     display: flex;
     flex-direction: row;
-    border: 1px solid #d50b2e;
+    border: 1px solid $color-hwr-red;
 }
 
 .v-treeview-node__children {

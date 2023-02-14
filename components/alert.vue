@@ -30,7 +30,18 @@
     </div>
 </template>
 
+
 <style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
 .my-4.info {
     opacity: 0.22;
 }

@@ -1,5 +1,5 @@
 <template>
-    <v-app dark>
+    <v-app>
         <NuxtLink to="/login/username">Anmelden</NuxtLink>
         
         <RegistrationPanel />
@@ -47,6 +47,22 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { UsernameField }
+    components: { 
+        UsernameField 
+    }
 }
 </script>
+
+<style lang="scss">
+/* Dark Theme Styling */
+
+
+/* Light Theme Styling */
+
+
+/* General Mobile Styling */
+
+
+/* General Desktop Styling */
+
+</style>
