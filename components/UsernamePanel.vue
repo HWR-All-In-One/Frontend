@@ -20,8 +20,6 @@
                 label="Benutzer"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
-            <a class="forgot-user-link" href="/">
-                Benutzernamen vergessen?
             <a class="forgot-user-link" href="/login/forget/fusername">
                 Benutzer vergessen?
             </a>
