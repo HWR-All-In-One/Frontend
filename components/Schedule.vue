@@ -1,5 +1,5 @@
 <template>
-    <v-row class="fill-height">
+    <v-row class="schedule fill-height">
         <v-col>
             <v-sheet height="64">
                 <v-toolbar flat>
@@ -106,7 +106,6 @@ export default {
             month: 'Monat',
             week: 'Woche',
             day: 'Tag',
-            '4day': '5 Tage',
         },
         selectedEvent: {},
         selectedElement: null,
@@ -186,14 +185,20 @@ export default {
 
 <style lang="scss">
 /* Dark Theme Styling */
+// .theme--dark
 
 
 /* Light Theme Styling */
-
+// .theme--light
 
 /* General Mobile Styling */
 
 
 /* General Desktop Styling */
+.schedule {
+    margin-top: 5rem;
+    border-radius: 15px;
+    border: 1px solid $color-hwr-red;
+}
 
 </style>

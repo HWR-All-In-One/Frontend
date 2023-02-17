@@ -1,9 +1,16 @@
 <template>
-    <h1>Kalender</h1>
+    <Schedule />
 </template>
 
 <script>
+import Schedule from '~/components/Schedule.vue';
 
+export default {
+    name: "TestLayout",
+    components: {
+        Schedule,
+    }
+}
 </script>
 
 <style lang="scss">
