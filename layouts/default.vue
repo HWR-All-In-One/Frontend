@@ -19,14 +19,16 @@
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item class="theme-icon">
-                    <v-icon class="mdi mdi-theme-light-dark"/>
-                </v-list-item>
-                <v-list-item class="theme-toggle-item">
-                    <div class="theme-toggle-box">
-                        <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset persistent-hint />
-                    </div>
-                </v-list-item>
+                <div class="theme-toggle-box">
+                    <v-list-item class="theme-icon">
+                        <v-icon class="mdi mdi-theme-light-dark"/>
+                    </v-list-item>
+                    <v-list-item class="theme-toggle-item">
+                        <div class="theme-toggle-box">
+                            <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset persistent-hint />
+                        </div>
+                    </v-list-item>
+                </div>
             </v-list>
         </v-navigation-drawer>
         <v-main>
@@ -88,7 +90,7 @@ export default {
     background-color: #363636;
 
     .v-list {
-        height: 100vh;
+        max-height: 100vh;
         position: absolute;
 
         .logo {
@@ -101,19 +103,12 @@ export default {
                 width: 5.4rem;
             }
         }
-
-        .theme-icon {
-            margin-left: 0.7rem;
-            position: absolute;
-            bottom: 3rem;
-        }
-
-        .theme-toggle-item {
-            margin-left: 0.5rem;
-            position: absolute;
-            bottom: 0;
-        }
     }
+}
+
+.theme-toggle-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .v-navigation-drawer__border {

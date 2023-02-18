@@ -35,16 +35,6 @@
 
         <!-- D -->
 
-        
-        <div class="component">
-            <h2 class="component-title">
-                Dropdown List - DropdownList.vue
-            </h2>
-            <div class="component-box">
-                <DropdownList/>
-            </div>
-            <br/>
-        </div>
 
 
         <!-- E -->
@@ -53,7 +43,15 @@
 
         <!-- F -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Passwort vergessen Panel  - ForgetPasswordPanel.vue
+            </h2>
+            <div class="component-box">
+                <ForgetPasswordPanel />
+            </div>
+            <br/>
+        </div>
 
         <!-- G -->
 
@@ -81,16 +79,6 @@
 
         <!-- M -->
 
-        <div class="component">
-            <h2 class="component-title">
-                Dropdown List - Mainlist.vue
-            </h2>
-            <div class="component-box">
-                <Mainlist/>
-            </div>
-            <br/>
-        </div>
-
 
 
         <!-- N -->
@@ -105,7 +93,7 @@
 
         <div class="component">
             <h2 class="component-title">
-                Password Eingabe - PasswordPanel.vue
+                Passworteingabe - PasswordPanel.vue
             </h2>
             <div class="component-box">
                 <PasswordPanel/>
@@ -124,7 +112,7 @@
                 Registrierung - RegistrationPanel.vue
             </h2>
             <div class="component-box">
-                <RegistrationPanel/>
+                <RegistrationPanel />
             </div>
             <br/>
         </div> 
@@ -136,7 +124,17 @@
                 Stundenplan - Schedule.vue
             </h2>
             <div class="component-box">
-                <Schedule/>
+                <Schedule />
+            </div>
+            <br/>
+        </div>
+
+        <div class="component">
+            <h2 class="component-title">
+                Stundenplan Dropdown-Liste - ScheduleList.vue
+            </h2>
+            <div class="component-box">
+                <ScheduleList />
             </div>
             <br/>
         </div>
@@ -152,7 +150,7 @@
                 Benutzerkonto Anmeldepanel Nr. 1 - UsernamePanel.vue
             </h2>
             <div class="component-box">
-                <UsernamePanel/>
+                <UsernamePanel />
             </div>
             <br/>
         </div>
@@ -210,17 +208,23 @@
   
 <script>
 import Alert from '~/components/Alert.vue';
-import DropdownList from '~/components/DropdownList.vue';
+import ForgetPasswordPanel from '~/components/ForgetPasswordPanel.vue';
+import PasswordPanel from '~/components/PasswordPanel.vue';
+import RegistrationPanel from '~/components/RegistrationPanel.vue';
 import Schedule from '~/components/Schedule.vue';
-import UsernameField from '~/components/UsernamePanel.vue';
+import ScheduleList from '~/components/ScheduleList.vue';
+import UsernamePanel from '~/components/UsernamePanel.vue';
 
 export default {
     name: "TestLayout",
     components: {
     Alert,
+    PasswordPanel,
+    RegistrationPanel,
     Schedule,
-    DropdownList,
-    UsernameField,
+    ScheduleList,
+    UsernamePanel,
+    ForgetPasswordPanel
 }
 }
 </script>
@@ -251,7 +255,7 @@ export default {
     padding-bottom: 10px;
     text-align: center;
     padding-top: 10px;
-    color: #000;
+    color: $color-dark-mode-grey;
 }
 
 .component {
@@ -271,6 +275,6 @@ export default {
     width: 90%;
     margin-left: 5%;
     text-align: center;
-    color: #000;
+    color: $color-dark-mode-grey;
 }
 </style>
