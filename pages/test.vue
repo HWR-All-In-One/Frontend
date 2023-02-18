@@ -81,6 +81,16 @@
 
         <!-- M -->
 
+        <div class="component">
+            <h2 class="component-title">
+                Dropdown List - Mainlist.vue
+            </h2>
+            <div class="component-box">
+                <Mainlist/>
+            </div>
+            <br/>
+        </div>
+
 
 
         <!-- N -->
