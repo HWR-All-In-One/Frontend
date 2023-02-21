@@ -3,6 +3,31 @@
 </template>
 
 <script>
+/**
+ * Wir benötigen insgesamt eine Haupt und 5 Unterebenen bzw. untergegliederte Dropdowns
+ * 
+ * Fachrichtung (nicht klickbar - nur hover opening) [1. Ebene - Hauptebene]
+ *  -> Informatik (nicht klickbar - nur hover opening) [2. Ebene - 1. Subebene]
+ *      -> Jahrgang (nicht klickbar - nur hover opening) [3. Ebene - 2. Subebene]
+ *          -> 2021 (nicht klickbar - nur hover opening) [4. Ebene - 3. Subebene]
+ *              -> 1. Semester (nicht klickbar - nur hover opening) [5. Ebene - 4. Subebene]
+ *                  -> Kurs A (klickbar - lädt den entsprechenden Kalender in die Webseite) [6. Ebene - 5. Subebene]
+ *                  -> Kurs B (klickbar - lädt den entsprechenden Kalender in die Webseite)
+ *                  -> Kurs C (klickbar - lädt den entsprechenden Kalender in die Webseite)
+ *              -> 2. Semester (nicht klickbar - nur hover opening)
+ *                  -> Kurs A (klickbar - lädt den entsprechenden Kalender in die Webseite)
+ *                  -> Kurs B (klickbar - lädt den entsprechenden Kalender in die Webseite)
+ *                  -> Kurs C (klickbar - lädt den entsprechenden Kalender in die Webseite)
+ *              -> 3. Semester (nicht klickbar - nur hover opening)
+ *              -> 4. Semester (nicht klickbar - nur hover opening)
+ *              -> 5. Semester (nicht klickbar - nur hover opening)
+ *              -> 6. Semester (nicht klickbar - nur hover opening)
+ *              -> 7. Semester (nicht klickbar - nur hover opening)
+ *          -> 2022 (nicht klickbar - nur hover opening)
+ *          -> 2023 (nicht klickbar - nur hover opening)
+ *  -> Maschinenebau
+ */
+
 export default {
     data: () => ({
         active: false,
