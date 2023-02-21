@@ -23,7 +23,7 @@
                 <a class="forgot-user-link" href="/login/forget/fusername">
                     Benutzer vergessen?
                 </a>
-                <a class="forgot-password-link" href="/login/forget/fpassword">
+                <a class="forgot-password-link" href="https://www.it.hwr-berlin.de/helpdesk/formulare/" target="_blank">
                     Passwort vergessen?
                 </a>
             </vrow>
@@ -105,6 +105,8 @@
     background-color: $color-white;
     margin-bottom: 2% !important;
     border-bottom: 0cm !important;
+    border: 1px solid $color-hwr-red;
+
 }
 
 .password-input {

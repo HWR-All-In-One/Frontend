@@ -48,9 +48,9 @@
                 
             </v-text-field>
         </div>
-
-        <!-- Hier fehlt noch die Auswahl des Studiengangs zu verbesserten Personlisierung -->
-
+        <div>
+            <Mainlist/>
+        </div>
         <div class="panel-toa">
             <v-checkbox class="panel-toa-checkbox"/>
             <div class="agb-container">
@@ -87,7 +87,7 @@
 /* General Desktop Styling */
 .create-account-panel {
     width: 30rem;
-    height: 46.5rem;
+    height: 48.5rem;
     padding: 50px;
     display: flex;
     flex-direction: column;
