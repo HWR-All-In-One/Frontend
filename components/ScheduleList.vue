@@ -1,17 +1,19 @@
 <template>
     <div>
         <v-list class="schedule-list">
-            <list-item v-for="item in items" :item="item" :key="item.title" />
+            <ListItem v-for="item in items" :item="item" :key="item.title" />
         </v-list>
     </div>
 </template>
 
 <script>
+import ListItem from '~/components/ListItem.vue';
+
 export default {
     name: "schedulelist",
     components: {
-        ListItem: () => import("./ListItem.vue")
-    },
+        ListItem,
+},
     data: () => ({
         items: [
             {

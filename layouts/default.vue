@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-navigation-drawer permanent miniVariant mini-variant-width="5.5rem" fixed app>
-            <v-list>
+            <v-list class="navbar">
                 <div class="logo">
                     <a class="home-link" href="/">
                         <img src="~/assets/images/hwr_logo.svg" alt="HWR-APP-logo" />
@@ -19,17 +19,15 @@
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <div class="theme-toggle-box">
-                    <v-list-item class="theme-icon">
-                        <v-icon class="mdi mdi-theme-light-dark"/>
-                    </v-list-item>
-                    <v-list-item class="theme-toggle-item">
-                        <div class="theme-toggle-box">
-                            <v-switch class="theme-toggle" v-model="$vuetify.theme.dark" inset persistent-hint />
-                        </div>
-                    </v-list-item>
-                </div>
             </v-list>
+            <div class="theme-toggle">
+                <v-list-item class="theme-toggle-icon">
+                    <v-icon class="mdi mdi-theme-light-dark" />
+                </v-list-item>
+                <v-list-item class="theme-toggle-item">
+                    <v-switch class="theme-toggle-switch" v-model="$vuetify.theme.dark" inset persistent-hint />
+                </v-list-item>
+            </div>
         </v-navigation-drawer>
         <v-main>
             <v-container>
@@ -106,11 +104,6 @@ export default {
     }
 }
 
-.theme-toggle-box {
-    display: flex;
-    flex-direction: column;
-}
-
 .v-navigation-drawer__border {
     width: 0.12rem;
 }
@@ -120,10 +113,19 @@ export default {
     color: $color-hwr-red;
 }
 
+.navbar {
+    position: relative;
+}
+
 .theme-toggle {
     position: absolute;
-    left: 1.45rem;
-    bottom: 0.2rem;
+    bottom: 0.5rem;
+    left: 0.7rem;
+}
+
+.theme-toggle-switch {
+    position: absolute;
+    left: -0.7rem;
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
