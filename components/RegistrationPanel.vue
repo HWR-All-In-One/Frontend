@@ -11,6 +11,7 @@
         </div>
         <div class="create-account-panel-middle">
             <v-text-field class="email-create-input"
+                id="Input1"
                 hide-details
                 single-linenpm 
                 filled outlined 
@@ -19,6 +20,7 @@
             </v-text-field>
 
             <v-text-field class="username-create-input"
+                id="Input2"
                 hide-details
                 single-linenpm 
                 filled outlined 
@@ -27,6 +29,7 @@
             </v-text-field>
             
             <v-text-field class="password-create-input"
+                id="Input3"
                 hide-details
                 single-linenpm 
                 filled outlined 
@@ -36,6 +39,7 @@
             </v-text-field>
 
             <v-text-field class="password2-create-input"
+                id="Input4"
                 hide-details
                 single-linenpm 
                 filled outlined 
@@ -44,6 +48,9 @@
                 
             </v-text-field>
         </div>
+
+        <!-- Hier fehlt noch die Auswahl des Studiengangs zu verbesserten Personlisierung -->
+
         <div class="panel-toa">
             <v-checkbox class="panel-toa-checkbox"/>
             <div class="agb-container">
@@ -165,5 +172,12 @@
 </style>
 
 <script>
+    export default{
+
+       
+
+    }
+    //alert('Halo Welt');
+    //document.getElementById("Input1").style.color ="red";
 
 </script>
