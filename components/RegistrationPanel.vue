@@ -178,6 +178,16 @@ export default {
 
 }
     //alert('Halo Welt');
+    //name: 'ContactForm',
+    //data() {
+    //    return {
+    //        form: {
+    //            name: "",
+    //            email: "",
+    //            message: "",
+    //        },
+    //    };
+    //},
     //document.getElementById("Input1").style.color ="red";
 
 </script>
