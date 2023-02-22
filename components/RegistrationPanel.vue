@@ -1,71 +1,52 @@
 <template>
     <div class="create-account-panel">
         <div class="create-account-panel-top">
-            <h1 class="first-title"> 
-                HWR Student Portal 
+            <h1 class="first-title">
+                HWR Student Portal
             </h1>
             <img class="bear-image" src="~/assets/images/Bear.png">
-            <h2 class="second-title"> 
-                Registrierung 
+            <h2 class="second-title">
+                Registrierung
             </h2>
         </div>
         <div class="create-account-panel-middle">
-            <v-text-field class="email-create-input"
-                id="Input1"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="HWR - Emailadresse"
-                hint="Deine Emailadresse der bei der HWR">
-            </v-text-field>
+            <v-form @submit.prevent>
+                <v-text-field class="email-create-input" id="Input1" hide-details single-linenpm filled outlined
+                    :rules="rules" name="email" type="email" label="HWR - Emailadresse"
+                    hint="Deine Emailadresse der bei der HWR">
+                </v-text-field>
 
-            <v-text-field class="username-create-input"
-                id="Input2"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Benutzername"
-                hint="Dein Nutzername von Moodle">
-            </v-text-field>
-            
-            <v-text-field class="password-create-input"
-                id="Input3"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Passwort"
-                hint="Dein Passwort von Moodle">
-                :rules="rules"
-            </v-text-field>
+                <v-text-field class="username-create-input" id="Input2" hide-details single-linenpm filled outlined
+                    name="user" type="user" label="Benutzername" hint="Dein Nutzername von Moodle">
+                </v-text-field>
 
-            <v-text-field class="password2-create-input"
-                id="Input4"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Passwort bestätigen"
-                hint="Dein Passwort von Moodle">
-                
-            </v-text-field>
+                <v-text-field class="password-create-input" id="Input3" hide-details single-linenpm filled outlined
+                    name="password" type="password" label="Passwort" hint="Dein Passwort von Moodle">
+                    :rules="rules"
+                </v-text-field>
+
+                <v-text-field class="password2-create-input" id="Input4" hide-details single-linenpm filled outlined
+                    label="Passwort bestätigen" hint="Dein Passwort von Moodle">
+
+                </v-text-field>
+            </v-form>
         </div>
         <div>
-            <Mainlist/>
+            <Mainlist />
         </div>
         <div class="panel-toa">
-            <v-checkbox class="panel-toa-checkbox"/>
+            <v-checkbox id="checkbox" class="panel-toa-checkbox" />
             <div class="agb-container">
-                Akzeptierst du die 
+                Akzeptierst du die
                 <a class="agb-link" href="/">AGB</a>?
             </div>
-            <v-btn  class="continue-button" 
-                    to="/" 
-                    :disabled="!enabled">
-                    Registrieren
+            <v-btn class="continue-button" to="/" :disabled="!enabled" id="submit" onclick="registrate()">
+                Registrieren
             </v-btn>
         </div>
         <div class="create-account-panel-bottom">
         </div>
-    </div>
+</div>
 </template>
 
 <style lang="scss">
@@ -171,12 +152,31 @@
 }
 </style>
 
-<script>
-    export default{
+<script setup>
+import { METHODS } from 'http';
+import Registration from '~/pages/registration.vue';
 
-       
+export default {
+   
+    el: '#checkbox',
 
+    methods: {
+        enabled() {
+            return (
+                this.user_name != '' &&
+                this.email != '' &&
+                this.phone != '' &&
+                this.address != ''
+            )
+        },
+
+
+        registrate() {
+
+        }
     }
+
+}
     //alert('Halo Welt');
     //document.getElementById("Input1").style.color ="red";
 
