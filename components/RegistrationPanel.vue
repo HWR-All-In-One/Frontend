@@ -12,7 +12,7 @@
         <div class="create-account-panel-middle">
             <v-text-field class="email-create-input"
                 hide-details
-                single-linenpm 
+                single-line 
                 filled outlined 
                 label="HWR - Emailadresse"
                 hint="Deine Emailadresse der bei der HWR">
