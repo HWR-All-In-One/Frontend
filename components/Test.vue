@@ -1,129 +1,67 @@
 <template>
-  <div>
-    <v-row
-      justify="center"
-    >
-      <v-btn
-        color="primary"
-        class="ma-2"
-        @click="dialog = true"
-      >
-        Open Dialog 1
-      </v-btn>
-      <v-dialog
-        v-model="dialog"
-        width="auto"
-      >
-        <v-card>
-          <v-card-title>
-            Dialog 1
-          </v-card-title>
-          <v-card-text>
-            <v-btn
-              color="primary"
-              class="ma-2"
-              @click="dialog2 = true"
-            >
-              Open Dialog 2
-            </v-btn>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              color="primary"
-              variant="text"
-              @click="dialog = false"
-            >
-              Close
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-
-      <v-dialog
-        v-model="dialog2"
-        width="auto"
-      >
-        <v-card>
-          <v-card-title>
-            Dialog 2
-          </v-card-title>
-          <v-card-text>
-            <v-btn
-              color="primary"
-              @click="dialog3 = !dialog3"
-            >
-              Open Dialog 3
-            </v-btn>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              color="primary"
-              variant="text"
-              @click="dialog2 = false"
-            >
-              Close
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-
-      <v-dialog
-        v-model="dialog3"
-        width="auto"
-      >
-        <v-card>
-          <v-card-title>
-            <span>Dialog 3</span>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn
-              color="primary"
-              variant="text"
-              @click="dialog3 = false"
-            >
-              Close
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
+    <v-row justify="center">
+        <v-dialog v-model="dialog" persistent width="1024">
+            <template v-slot:activator="{ props }">
+                <v-btn color="primary" v-bind="props" @click="dialog = true">
+                    Verfassen
+                </v-btn>
+            </template>
+            <v-card>
+                <v-card-title>
+                    <span class="text-h5">User Profile</span>
+                </v-card-title>
+                <v-card-text>
+                    <v-container>
+                        <v-row>
+                            <v-col cols="12" sm="6" md="4">
+                                <v-text-field label="Legal first name*" required></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="4">
+                                <v-text-field label="Legal middle name"
+                                    hint="example of helper text only on focus"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="4">
+                                <v-text-field label="Legal last name*" hint="example of persistent helper text"
+                                    persistent-hint required></v-text-field>
+                            </v-col>
+                            <v-col cols="12">
+                                <v-text-field label="Email*" required></v-text-field>
+                            </v-col>
+                            <v-col cols="12">
+                                <v-text-field label="Password*" type="password" required></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6">
+                                <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required></v-select>
+                            </v-col>
+                            <v-col cols="12" sm="6">
+                                <v-autocomplete
+                                    :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                                    label="Interests" multiple></v-autocomplete>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                    <small>*indicates required field</small>
+                </v-card-text>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                        Close
+                    </v-btn>
+                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                        Save
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
     </v-row>
-  </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        dialog: false,
-        dialog2: false,
-        dialog3: false,
-        notifications: false,
-        sound: true,
-        widgets: false,
-        items: [
-          {
-            title: 'Click Me',
-          },
-          {
-            title: 'Click Me',
-          },
-          {
-            title: 'Click Me',
-          },
-          {
-            title: 'Click Me 2',
-          },
-        ],
-        select: [
-          { text: 'State 1' },
-          { text: 'State 2' },
-          { text: 'State 3' },
-          { text: 'State 4' },
-          { text: 'State 5' },
-          { text: 'State 6' },
-          { text: 'State 7' },
-        ],
-      }
+export default {
+    data() {
+        return {
+            dialog: false,
+        }
     },
-  }
+}
 </script>

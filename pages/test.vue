@@ -79,7 +79,15 @@
 
         <!-- M -->
 
-
+        <div class="component">
+            <h2 class="component-title">
+                Mail Werkzeugleiste - MailToolbar.vue
+            </h2>
+            <div class="component-box">
+                <MailToolbar />
+            </div>
+            <br/>
+        </div> 
 
         <!-- N -->
 
@@ -141,7 +149,15 @@
 
         <!-- T -->
 
-        
+        <div class="component">
+            <h2 class="component-title">
+                Test Komponente - Test.vue
+            </h2>
+            <div class="component-box">
+                <Test />
+            </div>
+            <br/>
+        </div>
 
         <!-- U -->
 
@@ -209,10 +225,12 @@
 <script>
 import Alert from '~/components/Alert.vue';
 import ForgetPasswordPanel from '~/components/ForgetPasswordPanel.vue';
+import MailToolbar from '~/components/MailToolbar.vue';
 import PasswordPanel from '~/components/PasswordPanel.vue';
 import RegistrationPanel from '~/components/RegistrationPanel.vue';
 import Schedule from '~/components/Schedule.vue';
 import ScheduleList from '~/components/ScheduleList.vue';
+import Test from '~/components/Test.vue';
 import UsernamePanel from '~/components/UsernamePanel.vue';
 
 export default {
@@ -224,7 +242,9 @@ export default {
     Schedule,
     ScheduleList,
     UsernamePanel,
-    ForgetPasswordPanel
+    ForgetPasswordPanel,
+    Test,
+    MailToolbar
 }
 }
 </script>
