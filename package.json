@@ -9,7 +9,8 @@
       "generate": "nuxt generate",
       "test": "yarn test:unit && yarn test:e2e",
       "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
-      "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
+      "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*",
+      "production": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "dependencies": {
       "@nuxtjs/pwa": "^3.3.5",
