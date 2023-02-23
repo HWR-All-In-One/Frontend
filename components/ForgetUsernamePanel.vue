@@ -19,29 +19,27 @@
 
             <h3 class="third-title">
 
-                des Passwords
+                des Benutzernamens
 
             </h3>
 
-        </div>
 
-        <div class="password-recovery-panel-middle">
+            <h4 class="text">
+                
+                Ihr Nutzername besteht aus s_ + IhrNachname + ihr Studienjahrgang 
+                
+                <br>
+                <br>
 
-            <v-text-field class="password-recovery-input" hide-details single-linenpm filled outlined
-                label="Email fuer die Wiederherstellung" hint="Die E-Mail, die ihr angegeben habt">
+                Ein Beispiel dafür ist der Student Jarod Umland aus dem 2021 Jahrgang:
 
-            </v-text-field>
+                <br>
+                <br>
+                
 
-        </div>
+                Benutzername:   s_umland21
 
-        <div class="password-recovery-panel-bottom">
-
-            <v-btn class="send-recovery-button" to="/login//forget/passwordsteps">
-
-                Sende E-Mail
-
-            </v-btn>
-
+            </h4>
         </div>
 
     </div>
@@ -49,32 +47,19 @@
 
  
 
-<style lang="scss">
-/* Dark Theme Styling */
+<style>
+.text{
+    text-align: justify !important;
+    line-height: 2.5rem;
 
-.theme--dark.v-treeview {
-
-    color: $color-dark-mode-grey;
 
 }
-
-
-
-/* Light Theme Styling */
-
-
-
-/* General Mobile Styling */
-
-
-
-/* General Desktop Styling */
 
 .password-recovery-panel {
 
     width: 40%;
 
-    height: 60%;
+    height: 80%;
 
     padding: 50px;
 
@@ -88,7 +73,7 @@
 
     align-self: center;
 
-    border: 1px solid $color-hwr-red;
+    border: 1px solid #D50B2E;
 
     border-radius: 15px;
 
@@ -111,8 +96,8 @@
 .first-title {
 
     margin-bottom: 30px;
-
-    color: $color-hwr-red;
+    text-align: center !important;
+    color: #D50B2E;
 
 }
 
@@ -162,9 +147,13 @@
 
 .password-recovery-input {
 
-    background-color: $color-white;
+    background-color: #fff;
 
-    border: 1px solid $color-hwr-red;
+    border: 1px solid #D50B2E;
+
+    width: 80%;
+
+    align-self: center;
 
 }
 
