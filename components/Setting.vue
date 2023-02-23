@@ -1,12 +1,7 @@
 <template>
   <v-menu bottom left>
     <template v-slot:activator="{ on, attrs }">
-      <v-btn
-        v-bind="attrs"
-        v-on="on"
-        color="primary"
-        icon
-      >
+      <v-btn v-bind="attrs" v-on="on" color="primary" icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </template>
@@ -29,33 +24,33 @@
 export default {
   data: () => ({
     items: [
-      { 
-        title: 'Edit', 
-        icon: 'mdi-pencil',
+      {
+        title: "Edit",
+        icon: "mdi-pencil",
         click() {
-          console.log('edit')
+          console.log("edit");
         }
       },
-      { 
-        title: 'Due Date',
-        icon: 'mdi-calendar',
+      {
+        title: "Due Date",
+        icon: "mdi-calendar",
         click() {
-          console.log('due date')
+          console.log("due date");
         }
       },
-      { 
-        title: 'Delete',
-        icon: 'mdi-delete',
+      {
+        title: "Delete",
+        icon: "mdi-delete",
         click() {
-          this.$store.dispatch('deleteTask', 1)
+          this.$store.dispatch("deleteTask", 1);
         }
       }
     ]
   }),
   methods: {
     handleClick(index) {
-      this.items[index].click.call(this)
+      this.items[index].click.call(this);
     }
   }
-}
+};
 </script>

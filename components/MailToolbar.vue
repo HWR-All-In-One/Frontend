@@ -58,7 +58,7 @@
                             >
                             </textarea>
 
-                            <input type="submit" value="Send" />
+                            <input type="submit" value="Senden" />
                           </form>
                         </form>
                       </div>
@@ -73,14 +73,14 @@
                     variant="text"
                     @click="dialog = false"
                   >
-                    Close
+                    Schließen
                   </v-btn>
                   <v-btn
                     color="blue-darken-1"
                     variant="text"
                     @click="dialog = false"
                   >
-                    Save
+                    Speichern
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -109,7 +109,6 @@
               ><v-icon>mdi-delete-forever</v-icon>Löschen</v-btn
             >
           </div>
-          
         </v-row>
       </template>
     </div>
@@ -117,18 +116,12 @@
 </template>
 
 <script>
-
-
 export default {
-
-
   data: () => ({
-
-
-	name: '',
-	email: '',
-  cc: '',
-	message: '',
+    name: "",
+    email: "",
+    cc: "",
+    message: "",
     dialog: false,
 
     items: [
@@ -154,34 +147,36 @@ export default {
       { text: "State 6" },
       { text: "State 7" }
     ],
-    
 
-	sendEmail(e) {
+    sendEmail(e) {
       try {
-        sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID', {
-          name: this.name,
-          email: this.email,
-          cc: this.cc,
-          message: this.message
-        })
-
+        sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          e.target,
+          "YOUR_USER_ID",
+          {
+            name: this.name,
+            email: this.email,
+            cc: this.cc,
+            message: this.message
+          }
+        );
       } catch (err) {
-           if (err instanceof ReferenceError) {
-            alert( "JSON Error: " + err.message );
-           } else {
-            throw err; // rethrow
-           }
+        if (err instanceof ReferenceError) {
+          alert("JSON Error: " + err.message);
+        } else {
+          throw err; // rethrow
+        }
       }
       // Reset form field
-      this.name = ''
-      this.email = ''
-      this.cc = ''
-      this.message = ''
-    },
+      this.name = "";
+      this.email = "";
+      this.cc = "";
+      this.message = "";
+    }
   })
-}
-
-
+};
 </script>
 
 <style>
@@ -231,8 +226,6 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
-
 
 input[type="submit"] {
   background-color: #4caf50;
