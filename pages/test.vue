@@ -43,15 +43,6 @@
 
         <!-- F -->
 
-        <div class="component">
-            <h2 class="component-title">
-                Passwort vergessen Panel  - ForgetPasswordPanel.vue
-            </h2>
-            <div class="component-box">
-                <ForgetPasswordPanel />
-            </div>
-            <br/>
-        </div>
 
         <!-- G -->
 
@@ -91,16 +82,7 @@
 
         <!-- P -->
 
-        <div class="component">
-            <h2 class="component-title">
-                Passworteingabe - PasswordPanel.vue
-            </h2>
-            <div class="component-box">
-                <PasswordPanel/>
-            </div>
-            <br/>
-        </div> 
-
+    
         <!-- Q -->
 
 
@@ -208,8 +190,6 @@
   
 <script>
 import Alert from '~/components/Alert.vue';
-import ForgetPasswordPanel from '~/components/ForgetPasswordPanel.vue';
-import PasswordPanel from '~/components/PasswordPanel.vue';
 import RegistrationPanel from '~/components/RegistrationPanel.vue';
 import Schedule from '~/components/Schedule.vue';
 import ScheduleList from '~/components/ScheduleList.vue';
@@ -219,12 +199,10 @@ export default {
     name: "TestLayout",
     components: {
     Alert,
-    PasswordPanel,
     RegistrationPanel,
     Schedule,
     ScheduleList,
     UsernamePanel,
-    ForgetPasswordPanel
 }
 }
 </script>
