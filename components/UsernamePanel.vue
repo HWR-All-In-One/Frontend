@@ -39,7 +39,7 @@
 
             <vrow class="forgot-row">
 
-                <a class="forgot-user-link" href="/login/forget/fusername">
+                <a class="forgot-user-link" href="/instructions">
 
                     Benutzer vergessen?
 

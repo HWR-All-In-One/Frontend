@@ -1,13 +1,9 @@
-
-
 <template>
-<!-- Can be deleted is now situated in login.vue -->
-
-<UsernamePanel/>
+    <ForgetUsernamePanel/>
 </template>
 
 <script>
-import UsernamePanel from '~/components/UsernamePanel.vue';
+import ForgetUsernamePanel from '~/components/ForgetUsernamePanel.vue';
 
 export default {
     name: "DefaultLayout",
@@ -36,7 +32,7 @@ export default {
     },
     components: {
     UsernameField,
-    UsernamePanel
+    ForgetUsernamePanel
 }
 }
 </script>
