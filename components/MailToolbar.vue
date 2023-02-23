@@ -24,37 +24,37 @@
                       <div class="container">
                         <form @submit.prevent="saveData()">
                           <form @submit.prevent="sendEmail">
-                            <label>Email</label>
+                            <label>An*</label>
                             <input
                               type="email"
                               v-model="email"
-                              name="email"
-                              placeholder="To"
+                              name="An"
+                              placeholder="An"
                             />
 
                             <label>CC</label>
                             <input
                               type="email"
-                              v-model="email"
+                              v-model="cc"
                               name="email"
                               placeholder="CC"
                             />
 
-                            <label>Subject</label>
+                            <label>Betreff</label>
                             <input
                               type="text"
                               v-model="name"
-                              name="name"
-                              placeholder="Subject"
+                              name="Betreff"
+                              placeholder="Betreff"
                             />
 
-                            <label>Message</label>
+                            <label>Nachricht</label>
                             <textarea
-                              name="message"
+                              name="Nachricht"
                               v-model="message"
                               cols="30"
                               rows="5"
-                              placeholder="Message"
+                              placeholder="Nachricht"
                             >
                             </textarea>
 
@@ -109,28 +109,7 @@
               ><v-icon>mdi-delete-forever</v-icon>Löschen</v-btn
             >
           </div>
-          <div class="menu">
-            <v-menu bottom left>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on" color="primary" icon>
-                  <v-icon>mdi-dots-vertical</v-icon>
-                </v-btn>
-              </template>
-
-              <v-list>
-                <v-list-item
-                  v-for="(item, index) in options"
-                  :key="index"
-                  @click="handleClick(index)"
-                >
-                  <v-list-item-icon>
-                    <v-icon v-text="item.icon"></v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </div>
+          
         </v-row>
       </template>
     </div>
@@ -148,6 +127,7 @@ export default {
 
 	name: '',
 	email: '',
+  cc: '',
 	message: '',
     dialog: false,
 
@@ -174,42 +154,14 @@ export default {
       { text: "State 6" },
       { text: "State 7" }
     ],
-    options: [
-      {
-        title: "Edit",
-        icon: "mdi-pencil",
-        click() {
-          console.log("edit");
-        }
-      },
-      {
-        title: "Due Date",
-        icon: "mdi-calendar",
-        click() {
-          console.log("due date");
-        }
-      },
-      {
-        title: "Delete",
-        icon: "mdi-delete",
-        click() {
-          // this.$store.dispatch('deleteTask', 1)
-          console.log("Logout");
-        }
-      }
-    ]
-  }),
-  methods: {
-
-    handleClick(index) {
-      this.options[index].click.call(this);
-    },
+    
 
 	sendEmail(e) {
       try {
         sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID', {
           name: this.name,
           email: this.email,
+          cc: this.cc,
           message: this.message
         })
 
@@ -223,10 +175,13 @@ export default {
       // Reset form field
       this.name = ''
       this.email = ''
+      this.cc = ''
       this.message = ''
     },
-  }
-};
+  })
+}
+
+
 </script>
 
 <style>
@@ -263,6 +218,7 @@ export default {
 label {
   float: left;
 }
+
 input[type="text"],
 [type="email"],
 textarea {
@@ -275,6 +231,8 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
+
+
 
 input[type="submit"] {
   background-color: #4caf50;

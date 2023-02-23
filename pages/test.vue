@@ -53,6 +53,8 @@
             <br/>
         </div>
 
+
+
         <!-- G -->
 
 
@@ -126,6 +128,16 @@
         </div> 
 
         <!-- S -->
+
+        <div class="component">
+            <h2 class="component-title">
+                Passwort vergessen Panel  - Setting.vue
+            </h2>
+            <div class="component-box">
+                <Setting />
+            </div>
+            <br/>
+        </div>
 
         <div class="component">
             <h2 class="component-title">
@@ -232,6 +244,7 @@ import Schedule from '~/components/Schedule.vue';
 import ScheduleList from '~/components/ScheduleList.vue';
 import Test from '~/components/Test.vue';
 import UsernamePanel from '~/components/UsernamePanel.vue';
+import Setting from '~/components/Setting.vue';
 
 export default {
     name: "TestLayout",
@@ -244,7 +257,8 @@ export default {
     UsernamePanel,
     ForgetPasswordPanel,
     Test,
-    MailToolbar
+    MailToolbar,
+    Setting
 }
 }
 </script>
