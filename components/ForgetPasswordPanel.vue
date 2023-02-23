@@ -1,3 +1,6 @@
+<!-- Can be deleted if you forget ur password ur just gonna get send to the
+HWR Website with the needed instructions-->
+
 <template>
     <div class="password-recovery-panel">
 
