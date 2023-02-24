@@ -29,12 +29,12 @@
             </v-text-field>
         </div>
         <div class="panel-toa">
-            <v-checkbox class="panel-toa-checkbox" @change="enableRegistration(this)" />
+            <v-checkbox class="panel-toa-checkbox" v-model="toaBoolean"/>
             <div class="agb-container">
                 Akzeptierst du die
                 <a class="agb-link" href="/">AGB</a>?
             </div>
-            <v-btn class="continue-button" id="continueButton" to="/">
+            <v-btn class="continue-button" id="continueButton" to="/" :disabled="!toaBoolean">
                 Registrieren
             </v-btn>
         </div>
@@ -149,16 +149,10 @@
 <script>
 
 export default {
-    enableRegistration(val) {
-        var sbmt = document.getElementById("panel-toa-checkbox");
-
-        if (val.checked == true) {
-            sbmt.disabled = false;
-        }
-        else {
-            sbmt.disabled = true;
-        }
-    }
-}
+  name: 'App',
+  data: () => ({
+    toaBoolean: true,
+  }),
+};
 
 </script>
