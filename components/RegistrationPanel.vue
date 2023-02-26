@@ -29,12 +29,12 @@
             </v-text-field>
         </div>
         <div class="panel-toa">
-            <v-checkbox class="panel-toa-checkbox" v-model="toaBoolean"/>
+            <v-checkbox class="panel-toa-checkbox" v-model="toaBoolean" />
             <div class="agb-container">
                 Akzeptierst du die
                 <a class="agb-link" href="/">AGB</a>?
             </div>
-            <v-btn class="continue-button" id="continueButton" to="/" :disabled="!toaBoolean">
+            <v-btn class="continue-button" id="continueButton" onClick="registrate()" to="/" :disabled="!toaBoolean">
                 Registrieren
             </v-btn>
         </div>
@@ -149,10 +149,26 @@
 <script>
 
 export default {
-  name: 'App',
-  data: () => ({
-    toaBoolean: true,
-  }),
+
+    async asyncData({ $pocketbase }) {
+        // fetch and return all "example" records...
+        const items = await $pocketbase.collection('example').getFullList();
+
+        return { items }
+    },
+  name: 'Registration',
+    data: () => ({
+        toaBoolean: true,
+    }),
+    methods: {
+        registrationHandler() {
+
+
+
+        }
+
+    }
+
 };
 
 </script>

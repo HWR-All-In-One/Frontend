@@ -2617,7 +2617,9 @@ __metadata:
     cross-env: ^7.0.3
     jsdom: ^20.0.1
     jsdom-global: ^3.0.2
+    node-fetch: ^2.6.6
     nuxt: ^2.15.8
+    pocketbase: ^0.11.1
     require-extension-hooks: ^0.3.3
     require-extension-hooks-babel: ^1.0.0
     require-extension-hooks-vue: ^3.0.0
@@ -8256,7 +8258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.6, node-fetch@npm:^2.6.7":
   version: 2.6.9
   resolution: "node-fetch@npm:2.6.9"
   dependencies:
@@ -9075,6 +9077,13 @@ __metadata:
   dependencies:
     ts-pnp: ^1.1.6
   checksum: a41716d13607be5a3e06ba58b17e9e619cf07da3a0a7b10bd41cd89362873041054fd2b7966ad30a1b26b826cfb8fecc0469a95902d5b1b8ba8f591e2fe6b96d
+  languageName: node
+  linkType: hard
+
+"pocketbase@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "pocketbase@npm:0.11.1"
+  checksum: 6f6fc024459619fac4c42f8808c43c84cfb6082885b4d8737a160d88daa6057cb1b450bf1dbfd1045e7bcc8497e4c37e1ff30cecf137037f9044867cc28e269d
   languageName: node
   linkType: hard
 

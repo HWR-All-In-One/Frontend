@@ -22,6 +22,7 @@
 <script>
 import UsernameField from '~/components/UsernamePanel.vue';
 
+
 export default {
     name: "DefaultLayout",
     data() {

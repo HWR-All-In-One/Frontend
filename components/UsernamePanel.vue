@@ -74,8 +74,6 @@
     </div>
 </template>
 
- 
-
 <style lang="scss">
 /* Dark Theme Styling */
 
@@ -297,3 +295,14 @@
 
 }
 </style>
+
+<script>
+
+export default {
+  name: 'App',
+  data: () => ({
+    toaBoolean: true,
+  }),
+};
+
+</script>
