@@ -30,17 +30,14 @@
             </div>
         </v-navigation-drawer>
         <v-main>
-            <v-container>
-                <Nuxt />
-            </v-container>
+            <Nuxt />
         </v-main>
     </v-app>
 </template>
 
 <script>
 export default {
-    name: "app",
-    name: "DefaultLayout",
+    name: "MailLayout",
     data() {
         return {
             items: [
@@ -85,7 +82,7 @@ export default {
 }
 
 .v-navigation-drawer {
-    background-color: $color-dark-mode;
+    background-color: #363636;
 
     .v-list {
         max-height: 100vh;
@@ -94,6 +91,7 @@ export default {
         .logo {
             position: relative;
             margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0);
 
             img {
                 height: 5rem;
