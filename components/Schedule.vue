@@ -51,34 +51,15 @@
                     </v-toolbar>
                 </v-sheet>
                 <v-sheet height="600">
-                    <v-calendar ref="calendar" v-model="focus" color="primary" :events="events"
-                        :event-color="getEventColor" :type="type" @click:event="showEvent" @click:more="viewDay"
-                        @click:date="viewDay" @change="updateRange"></v-calendar>
-                    <v-menu v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement"
-                        offset-x>
-                        <v-card color="grey lighten-4" min-width="350px" flat>
+                    <v-calendar locale="de" :interval-format="intervalFormat" :first-interval="7"
+                        :interval-count="15" interval-height="34.58" ref="calendar" v-model="focus" color="primary" :events="events" :event-color="getEventColor"
+                        :type="type" @click:event="showEvent" @click:more="viewDay" @click:date="viewDay"
+                        @change="updateRange"></v-calendar>
+                    <v-menu color="grey lighten-4" v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement" offset-x>
+                        <v-card min-width="350px" flat>
                             <v-toolbar :color="selectedEvent.color" dark>
-                                <v-btn icon>
-                                    <v-icon>
-                                        mdi-pencil
-                                    </v-icon>
-                                </v-btn>
                                 <v-toolbar-title v-html="selectedEvent.name"></v-toolbar-title>
-                                <v-spacer></v-spacer>
-                                <v-btn icon>
-                                    <v-icon>
-                                        mdi-heart
-                                    </v-icon>
-                                </v-btn>
-                                <v-btn icon>
-                                    <v-icon>
-                                        mdi-dots-vertical
-                                    </v-icon>
-                                </v-btn>
                             </v-toolbar>
-                            <v-card-text>
-                                <span v-html="selectedEvent.details"></span>
-                            </v-card-text>
                         </v-card>
                     </v-menu>
                 </v-sheet>
@@ -88,58 +69,57 @@
 </template>
 
 <script>
-/**
- * type Lesson struct {
-    Start       *time.Time
-    End         *time.Time
-    Description string
-    Summary     string
-    Location    string
-    Organizer   string
-    Type        string
-    Name        string
-}
- */
-
 export default {
     name: "schedule",
     components: {
         ListItem: () => import("./ListItem.vue")
     },
     data: () => ({
+        colors: ['#1576d0'],
+        events: [],
         focus: '',
-        type: 'month',
+        intervalFormat: '',
+        names: [
+            'Datenanalyse - Raum: Online - Prof. Dr. Höhne',
+            'Labor SWE II - Gruppe 2 - Raum: 6B.052 - B.Sc. Stricker',
+            'Labor SWE II - Gruppe 1 - Raum: 6B.052 - B.Sc. Stricker',
+            'Optimierte Verfahren - Raum: 6B.173 - Prof. Dr. Winter',
+            'C++ - Raum: 6B.052 - Puschmann',
+            'Skriptsprachen - Raum: 6B.052 - B.Sc. Löchner',
+            'SWE II - Raum: 6B.450 - B.Sc. Stricker',
+            'Webprogrammierung - Raum: Online - B.Sc. Brunkow',
+        ],
+        selectedElement: null,
+        selectedEvent: {},
+        selectedOpen: false,
+        type: 'week',
         typeToLabel: {
             month: 'Monat',
             week: 'Woche',
             day: 'Tag',
         },
-        selectedEvent: {},
-        selectedElement: null,
-        selectedOpen: false,
-        events: [],
-        colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
-        names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
     }),
     mounted() {
         this.$refs.calendar.checkChange()
     },
     methods: {
-        viewDay({ date }) {
-            this.focus = date
-            this.type = 'day'
-        },
         getEventColor(event) {
             return event.color
         },
-        setToday() {
-            this.focus = ''
+        intervalFormatter(locale, getOptions) {
+            return locale.time;
+        },
+        next() {
+            this.$refs.calendar.next()
         },
         prev() {
             this.$refs.calendar.prev()
         },
-        next() {
-            this.$refs.calendar.next()
+        rnd(a, b) {
+            return Math.floor((b - a + 1) * Math.random()) + a
+        },
+        setToday() {
+            this.focus = ''
         },
         showEvent({ nativeEvent, event }) {
             const open = () => {
@@ -159,17 +139,16 @@ export default {
         },
         updateRange({ start, end }) {
             const events = []
-
-            const min = new Date(`${start.date}T00:00:00`)
-            const max = new Date(`${end.date}T23:59:59`)
+            const min = new Date(`${start.date}T07:00:00`)
+            const max = new Date(`${end.date}T20:59:59`)
             const days = (max.getTime() - min.getTime()) / 86400000
             const eventCount = this.rnd(days, days + 20)
 
-            for (let i = 0; i < eventCount; i++) {
-                const allDay = this.rnd(0, 3) === 0
+            for (let i = 3; i < eventCount; i++) {
+                const allDay = this.rnd(2, 6) === 0
                 const firstTimestamp = this.rnd(min.getTime(), max.getTime())
                 const first = new Date(firstTimestamp - (firstTimestamp % 900000))
-                const secondTimestamp = this.rnd(2, allDay ? 288 : 8) * 900000
+                const secondTimestamp = this.rnd(3, allDay ? 288 : 8) * 900000
                 const second = new Date(first.getTime() + secondTimestamp)
 
                 events.push({
@@ -180,11 +159,11 @@ export default {
                     timed: !allDay,
                 })
             }
-
             this.events = events
         },
-        rnd(a, b) {
-            return Math.floor((b - a + 1) * Math.random()) + a
+        viewDay({ date }) {
+            this.focus = date
+            this.type = 'day'
         },
     },
 }
@@ -230,5 +209,13 @@ export default {
 .theme-toggle-item.v-list-item {
     align-self: flex-start;
     margin-left: 0.5rem;
+}
+
+.v-calendar-daily {
+    border: 1px solid $color-grey-inner-border;
+}
+
+.v-sheet.theme--dark.v-toolbar {
+    background-color: $color-hwr-red !important;
 }
 </style>

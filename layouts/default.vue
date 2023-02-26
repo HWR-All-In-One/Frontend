@@ -51,8 +51,8 @@ export default {
                 },
                 {
                     icon: "mdi-calendar-multiple",
-                    title: "Kalender",
-                    to: "/calendar"
+                    title: "Stundenplan",
+                    to: "/schedule"
                 },
                 {
                     icon: "mdi-email",

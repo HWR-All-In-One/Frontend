@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="calendar-title">Informatik - Jahrgang ???? - ?. Semester - Kurs ?</h1>
+        <h1 class="calendar-title">Stundenplan</h1>
         <ScheduleList />
         <Schedule />
     </div>
@@ -11,7 +11,7 @@ import Schedule from '~/components/Schedule.vue';
 import ScheduleList from '~/components/ScheduleList.vue';
 
 export default {
-    name: "informatik21sem4ka",
+    name: "informatik",
     components: {
         Schedule,
         ScheduleList,
