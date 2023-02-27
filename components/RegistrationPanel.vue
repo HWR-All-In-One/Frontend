@@ -152,13 +152,19 @@
 }
 </style>
 
-<script setup>
-import { METHODS } from 'http';
-import Registration from '~/pages/registration.vue';
-
+<script>
 export default {
-   
     el: '#checkbox',
+    name: 'ContactForm',
+    data() {
+        return {
+            form: {
+                name: "",
+                email: "",
+                message: "",
+            },
+        };
+    },
 
     methods: {
         enabled() {
