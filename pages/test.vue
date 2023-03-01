@@ -111,15 +111,7 @@
             <br/>
         </div>
 
-        <div class="component">
-            <h2 class="component-title">
-                Mail Page Inbox Pätzoldt- MailInbox3.vue
-            </h2>
-            <div class="component-box">
-                <MailInbox3/>
-            </div>
-            <br/>
-        </div>
+        
 
 
         <!-- N -->
@@ -301,7 +293,7 @@ import MailInbox1 from '~/components/MailInbox1.vue';
 import MailInbox2 from '~/components/MailInbox2.vue';
 import MailInbox3 from '~/components/MailInbox3.vue';
 import OpenDialog from '~/components/OpenDialog.vue';
-import Paetzoldt from '~/components/Paetzoldt.vue';
+
 
 export default {
     name: "TestLayout",
@@ -319,7 +311,7 @@ export default {
     MailInbox1,
     MailInbox2,
     MailInbox3,
-    Paetzoldt,
+    
     OpenDialog
 }
 }

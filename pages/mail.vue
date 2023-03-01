@@ -6,6 +6,14 @@
         <MailToolbar />
       </div>
 
+      <div>
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+                    <v-list-item-action>
+                            {{ item.title }}
+                    </v-list-item-action>
+                </v-list-item>
+    </div>
+
       <div class="mails">
         <div class="single-mail">
           <input
@@ -1607,7 +1615,7 @@
         <h2>Ordner:</h2>
         <ul>
           <li>
-            <a href="./">Pätzoldt</a>
+            <a href="./Paetzoldt">Pätzoldt</a>
           </li>
           <li>
             <a href="/">1. Semester</a>
@@ -1645,6 +1653,15 @@ export default {
   }),
   loaded: false,
   loading: false,
+  
+            items: [
+                {
+                    
+                    title: "Pätzoldt",
+                    to: "/Paetzoldt"
+                }
+            ],
+        
   components: {
     MailToolbar,
     ScheduleList
