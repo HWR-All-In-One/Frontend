@@ -2,7 +2,7 @@
   <div class="main-mail-content">
     <div class="left-mail-content">
       <div class="head">
-        <h1 class="page-title">Mails</h1>
+        <h1 class="page-title">Pätzoldt</h1>
         <MailToolbar1 />
       </div>
 
