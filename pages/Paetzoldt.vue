@@ -2,7 +2,7 @@
   <div class="main-mail-content">
     <div class="left-mail-content">
       <div class="head">
-        <h1 class="page-title">Pätzoldt</h1>
+        <h1 class="page-title">Mails - Pätzoldt</h1>
         <MailToolbar1 />
       </div>
 
@@ -906,6 +906,75 @@
 
 		
         
+      </div>
+    </div>
+    <div class="right-mail-content">
+      <div
+        
+        density="compact"
+        variant="solo"
+        label="Search templates"
+        append-inner-icon="mdi-magnify"
+        single-line
+        hide-details
+        @click:append-inner="onClick"
+      >
+        <input
+          alt="Mail suchen"
+          onfocus="this.value=''"
+          value="Mail suchen"
+          type="text"
+          id="mail-search"
+          name="mail-search"
+        />
+        <div class="main-directories">
+          <a href="/">
+            <h2>Posteingang:</h2>
+          </a>
+          <ul>
+            <li>
+              <a href="/">Entwurf</a>
+            </li>
+            <li>
+              <a href="/">Gesendet</a>
+            </li>
+            <li>
+              <a href="/">Archiv</a>
+            </li>
+            <li>
+              <a href="/">Spam</a>
+            </li>
+            <li>
+              <a href="/">Papierkorb</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="additional-directories">
+        <h2>Ordner:</h2>
+        <ul>
+          <li>
+            <a href="./Paetzoldt">Pätzoldt</a>
+          </li>
+          <li>
+            <a href="/">1. Semester</a>
+          </li>
+          <li>
+            <a href="/">2. Semester</a>
+          </li>
+          <li>
+            <a href="/">3. Semester</a>
+          </li>
+          <li>
+            <a href="/">4. Semester</a>
+          </li>
+          <li>
+            <a href="/">5. Semester</a>
+          </li>
+          <li>
+            <a href="/">6. Semester</a>
+          </li>
+        </ul>
       </div>
     </div>
     
