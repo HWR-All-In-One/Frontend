@@ -1,5 +1,8 @@
 <template>
-    <h1>Benutzerkonto</h1>
+    <div>
+      <h1 class="page-title">Benutzerkonto</h1>
+
+    </div>
 </template>
 
 <script>
@@ -17,5 +20,7 @@
 
 
 /* General Desktop Styling */
-
+.page-title {
+    margin: 1rem 0;
+}
 </style>

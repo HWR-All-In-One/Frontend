@@ -13,7 +13,7 @@ export default {
     name: "schedulelist",
     components: {
         ListItem,
-},
+    },
     data: () => ({
         items: [
             {
@@ -631,7 +631,7 @@ export default {
 
 <style lang="scss">
 /* Dark Theme Styling */
-/* 
+/*
 .theme--dark {
 
 }
@@ -641,7 +641,7 @@ export default {
 /* Light Theme Styling */
 /*
 .theme--light {
-    
+
 }
 */
 
@@ -650,6 +650,7 @@ export default {
 
 /* General Desktop Styling */
 .schedule-list {
+    display: none;
     padding: 0;
     margin-bottom: 1.5rem;
 }
