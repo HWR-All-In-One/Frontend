@@ -1,9 +1,6 @@
 <template>
     <v-row class="mail-toolbar">
-        <div class="checkBox">
-            <input type="checkbox" class="checkbox-custom" />
-        </div>
-
+        
         <div class="new">
             <v-dialog v-model="dialog" persistent width="1024">
                 <template v-slot:activator="{ props }">
@@ -22,7 +19,7 @@
                                     <form @submit.prevent="saveData()">
                                         <form @submit.prevent="sendEmail">
                                             <label>An*</label>
-                                            <input type="email" v-model="email" name="An" placeholder="An" />
+                                            <input type="email" v-model="email" name="An" placeholder="jeanette.paetzoldt@hwr-berlin.de" />
 
                                             <label>CC</label>
                                             <input type="email" v-model="cc" name="email" placeholder="CC" />
@@ -60,14 +57,9 @@
             </v-btn>
         </div>
         <div>
-            <v-btn variant="tonal"><v-icon>mdi-close-octagon</v-icon>Spam</v-btn>
-        </div>
-        <div>
-            <v-btn variant="tonal"><v-icon>mdi-folder-move</v-icon>Verschieben</v-btn>
-        </div>
-        <div>
             <v-btn variant="tonal"><v-icon>mdi-delete-forever</v-icon>Löschen</v-btn>
         </div>
+        
     </v-row>
 </template>
 

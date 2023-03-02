@@ -91,11 +91,44 @@
             <br/>
         </div> 
 
+        <div class="component">
+            <h2 class="component-title">
+                Mail Page Inbox Winter - MailInbox1.vue
+            </h2>
+            <div class="component-box">
+                <MailInbox1/>
+            </div>
+            <br/>
+        </div>
+
+        <div class="component">
+            <h2 class="component-title">
+                Mail Page Inbox Höhne- MailInbox2.vue
+            </h2>
+            <div class="component-box">
+                <MailInbox2/>
+            </div>
+            <br/>
+        </div>
+
+        
+
+
         <!-- N -->
 
 
 
         <!-- O -->
+
+        <div class="component">
+            <h2 class="component-title">
+                Open Dialog TEST - OpenDialog.vue
+            </h2>
+            <div class="component-box">
+                <OpenDialog/>
+            </div>
+            <br/>
+        </div> 
 
 
 
@@ -110,6 +143,17 @@
             </div>
             <br/>
         </div> 
+
+        <div class="component">
+            <h2 class="component-title">
+                Mail Page Pätzoldt Folder - Paetzoldt.vue
+            </h2>
+            <div class="component-box">
+                <Paetzoldt />
+            </div>
+            <br/>
+        </div>
+        
 
         <!-- Q -->
 
@@ -245,6 +289,11 @@ import ScheduleList from '~/components/ScheduleList.vue';
 import Test from '~/components/Test.vue';
 import UsernamePanel from '~/components/UsernamePanel.vue';
 import Setting from '~/components/Setting.vue';
+import MailInbox1 from '~/components/MailInbox1.vue';
+import MailInbox2 from '~/components/MailInbox2.vue';
+import MailInbox3 from '~/components/MailInbox3.vue';
+import OpenDialog from '~/components/OpenDialog.vue';
+
 
 export default {
     name: "TestLayout",
@@ -258,7 +307,12 @@ export default {
     ForgetPasswordPanel,
     Test,
     MailToolbar,
-    Setting
+    Setting,
+    MailInbox1,
+    MailInbox2,
+    MailInbox3,
+    
+    OpenDialog
 }
 }
 </script>
