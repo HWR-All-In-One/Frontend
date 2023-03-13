@@ -1,9 +1,13 @@
+
+
 <template>
-    <UsernameField/>
+<!-- Can be deleted is now situated in login.vue -->
+
+<UsernamePanel/>
 </template>
 
 <script>
-import UsernameField from '~/components/UsernamePanel.vue';
+import UsernamePanel from '~/components/UsernamePanel.vue';
 
 export default {
     name: "DefaultLayout",
@@ -30,9 +34,10 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { 
-        UsernameField,
-    }
+    components: {
+    UsernameField,
+    UsernamePanel
+}
 }
 </script>
 

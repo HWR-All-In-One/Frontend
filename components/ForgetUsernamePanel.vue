@@ -1,112 +1,197 @@
 <template>
     <div class="password-recovery-panel">
+
         <div class="password-recovery-panel-top">
-            <h1 class="first-title"> 
-                HWR Student Portal 
+
+            <h1 class="first-title">
+
+                HWR Student Portal
+
             </h1>
+
             <img class="bear-image" src="~/assets/images/Bear.png">
-            <h2 class="second-title"> 
-                Anmeldung 
+
+            <h2 class="second-title">
+
+                Wiederherstellung
+
             </h2>
-            <h3 class="third-title"> 
-                Zum Benutzerkonto 
+
+            <h3 class="third-title">
+
+                des Benutzernamens
+
             </h3>
+
+
+            <h4 class="text">
+                
+                Ihr Nutzername besteht aus s_ + IhrNachname + ihr Studienjahrgang 
+                
+                <br>
+                <br>
+
+                Ein Beispiel dafür ist der Student Jarod Umland aus dem 2021 Jahrgang:
+
+                <br>
+                <br>
+                
+
+                Benutzername:   s_umland21
+
+            </h4>
         </div>
-        <div class="password-recovery-panel-middle">
-            <v-text-field class="password-recovery-input"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Email fuer die Wiederherstellung"
-                hint="Die E-Mail, die ihr angegeben habt">
-            </v-text-field>
-        </div>
-        <div class="password-recovery-panel-bottom">
-            <v-btn class="send-recovery-button">
-                Sende E-Mail
-            </v-btn>
-        </div>
+
     </div>
 </template>
 
-<style lang="scss">
-/* Dark Theme Styling */
-.theme--dark.v-treeview {
-    color: $color-dark-mode-grey;
+ 
+
+<style>
+.text{
+    text-align: justify !important;
+    line-height: 2.5rem;
+
+
 }
 
-/* Light Theme Styling */
-
-
-/* General Mobile Styling */
-
-
-/* General Desktop Styling */
 .password-recovery-panel {
+
     width: 40%;
+
     height: 80%;
+
     padding: 50px;
+
+    margin-top: 5%;
+
+    margin-bottom: auto;
+
     display: flex;
+
     flex-direction: column;
+
     align-self: center;
-    border: 1px solid $color-hwr-red;
+
+    border: 1px solid #D50B2E;
+
     border-radius: 15px;
+
 }
+
+
 
 .password-recovery-panel-top {
+
     display: flex;
+
     flex-direction: column;
+
     align-self: center;
+
 }
+
+
 
 .first-title {
+
     margin-bottom: 30px;
-    color: $color-hwr-red;
+    text-align: center !important;
+    color: #D50B2E;
+
 }
+
+
 
 .bear-image {
-    width: 25%;
-    height: 45%;
-    margin-bottom: 30px;
+
+    width: 45%;
+
+    height: 60%;
+
     align-self: center;
+
 }
+
+
 
 .second-title {
+
     align-self: center;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .third-title {
+
     align-self: center;
+
     margin-bottom: 30px;
+
 }
+
+
 
 .password-recovery-panel-middle {
+
     display: flex;
+
     flex-direction: column;
+
 }
+
+
 
 .password-recovery-input {
-    background-color: $color-white;
-    border: 1px solid $color-hwr-red;
+
+    background-color: #fff;
+
+    border: 1px solid #D50B2E;
+
+    width: 80%;
+
+    align-self: center;
+
 }
+
+
 
 .forgot-password-link {
+
     margin-top: 10px;
+
     margin-bottom: 30px;
+
 }
+
+
 
 .password-recovery-panel-bottom {
+
     display: flex;
+
     flex-direction: row;
+
     flex-wrap: wrap;
+
     gap: 2%;
+
     justify-content: center;
+
 }
 
+
+
 .send-recovery-button {
+
     width: 49%;
+
     margin-top: 30px;
+
     height: 40px !important;
+
 }
 </style>

@@ -1,59 +1,41 @@
 <template>
     <div class="create-account-panel">
         <div class="create-account-panel-top">
-            <h1 class="first-title"> 
-                HWR Student Portal 
+            <h1 class="first-title">
+                HWR Student Portal
             </h1>
             <img class="bear-image" src="~/assets/images/Bear.png">
-            <h2 class="second-title"> 
-                Registrierung 
+            <h2 class="second-title">
+                Registrierung
             </h2>
         </div>
         <div class="create-account-panel-middle">
-            <v-text-field class="email-create-input"
-                hide-details
-                single-line 
-                filled outlined 
-                label="HWR - Emailadresse"
+            <v-text-field class="email-create-input" hide-details single-line filled outlined label="HWR - Emailadresse"
                 hint="Deine Emailadresse der bei der HWR">
             </v-text-field>
 
-            <v-text-field class="username-create-input"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Benutzername"
+            <v-text-field class="username-create-input" hide-details single-linenpm filled outlined label="Benutzername"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
-            
-            <v-text-field class="password-create-input"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Passwort"
+
+            <v-text-field class="password-create-input" hide-details single-linenpm filled outlined label="Passwort"
                 hint="Dein Passwort von Moodle">
                 :rules="rules"
             </v-text-field>
 
-            <v-text-field class="password2-create-input"
-                hide-details
-                single-linenpm 
-                filled outlined 
-                label="Passwort bestätigen"
-                hint="Dein Passwort von Moodle">
-                
+            <v-text-field class="password2-create-input" hide-details single-linenpm filled outlined
+                label="Passwort bestätigen" hint="Dein Passwort von Moodle">
+
             </v-text-field>
         </div>
         <div class="panel-toa">
-            <v-checkbox class="panel-toa-checkbox"/>
+            <v-checkbox class="panel-toa-checkbox" v-model="toaBoolean" />
             <div class="agb-container">
-                Akzeptierst du die 
+                Akzeptierst du die
                 <a class="agb-link" href="/">AGB</a>?
             </div>
-            <v-btn  class="continue-button" 
-                    to="/" 
-                    :disabled="!enabled">
-                    Registrieren
+            <v-btn class="continue-button" id="continueButton" onClick="registrate()" to="/" :disabled="!toaBoolean">
+                Registrieren
             </v-btn>
         </div>
         <div class="create-account-panel-bottom">
@@ -165,5 +147,28 @@
 </style>
 
 <script>
+
+export default {
+
+    async asyncData({ $pocketbase }) {
+        // fetch and return all "example" records...
+        const items = await $pocketbase.collection('example').getFullList();
+
+        return { items }
+    },
+  name: 'Registration',
+    data: () => ({
+        toaBoolean: true,
+    }),
+    methods: {
+        registrationHandler() {
+
+
+
+        }
+
+    }
+
+};
 
 </script>

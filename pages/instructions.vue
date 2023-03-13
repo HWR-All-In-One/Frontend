@@ -1,9 +1,9 @@
-<template>    
-    <PasswordPanel/>
+<template>
+    <ForgetUsernamePanel/>
 </template>
 
 <script>
-import PasswordInput from '~/components/PasswordPanel.vue';
+import ForgetUsernamePanel from '~/components/ForgetUsernamePanel.vue';
 
 export default {
     name: "DefaultLayout",
@@ -30,9 +30,10 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { 
-        PasswordInput,
-    }
+    components: {
+    UsernameField,
+    ForgetUsernamePanel
+}
 }
 </script>
 

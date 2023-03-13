@@ -299,7 +299,6 @@ export default {
     name: "TestLayout",
     components: {
     Alert,
-    PasswordPanel,
     RegistrationPanel,
     Schedule,
     ScheduleList,
