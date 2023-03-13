@@ -1,22 +1,22 @@
 <template>
     <div class="login-panel">
         <div class="login-panel-top">
-            <h1 class="first-title"> 
-                HWR Student Portal 
+            <h1 class="first-title">
+                HWR Student Portal
             </h1>
             <img class="bear-image" src="~/assets/images/Bear.png">
-            <h2 class="second-title"> 
-                Anmeldung 
+            <h2 class="second-title">
+                Anmeldung
             </h2>
-            <h3 class="third-title"> 
-                Zum Benutzerkonto 
+            <h3 class="third-title">
+                Zum Benutzerkonto
             </h3>
         </div>
         <div class="login-panel-middle">
             <v-text-field class="username-input"
                 hide-details
-                single-linenpm 
-                filled outlined 
+                single-linenpm
+                filled outlined
                 label="Benutzer"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
@@ -95,6 +95,7 @@
 .login-panel-middle {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .username-input {

@@ -1,4 +1,4 @@
-<template>    
+<template>
     <PasswordPanel/>
 </template>
 
@@ -30,7 +30,7 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { 
+    components: {
         PasswordInput,
     }
 }

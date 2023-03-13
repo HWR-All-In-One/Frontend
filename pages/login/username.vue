@@ -30,7 +30,7 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { 
+    components: {
         UsernameField,
     }
 }

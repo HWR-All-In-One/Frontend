@@ -23,4 +23,12 @@
 .page-title {
     margin: 1rem 0;
 }
+
+.login-button,
+.registration-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
 </style>

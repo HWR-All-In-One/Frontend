@@ -1,9 +1,9 @@
 <template>
     <v-app>
-        <NuxtLink to="/login/username">Anmelden</NuxtLink>
-        <NuxtLink to="/registration">Account erstellen</NuxtLink>
+        <NuxtLink class="login-button" to="/login/username">Anmelden</NuxtLink>
+        <NuxtLink class="registration-button" to="/registration">Account erstellen</NuxtLink>
         <NuxtChild />
-        
+
         <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
             <v-list>
                 <v-list-item @click.native="right = !right">
@@ -47,8 +47,8 @@ export default {
             title: "Vuetify.js"
         };
     },
-    components: { 
-        UsernameField 
+    components: {
+        UsernameField
     }
 }
 </script>
@@ -64,5 +64,12 @@ export default {
 
 
 /* General Desktop Styling */
+.login-button,
+.registration-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
 
 </style>

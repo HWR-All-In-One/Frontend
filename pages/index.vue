@@ -4,10 +4,7 @@
             <h1 class="main-title">
                 Hauptseite
             </h1>
-            <v-btn color="primary" nuxt to="/test">
-                Komponentenbibliothek
-            </v-btn>
-            <v-btn color="primary" nuxt to="/login">
+            <v-btn color="primary" nuxt to="/login/username">
                 Login
             </v-btn>
         </div>
@@ -33,5 +30,13 @@ export default {
 /* General Desktop Styling */
 .main-title {
     padding: 50px 0 25px 0;
+}
+
+.login-button,
+.registration-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
 }
 </style>
