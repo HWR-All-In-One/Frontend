@@ -14,7 +14,7 @@
             <v-row class="info-button-row" no-gutters>
                 <v-col class="grow"> </v-col>
                 <v-col class="shrink">
-                    <v-btn class="info-button" outlined color="info" >
+                    <v-btn class="info-button" outlined color="info">
                         Kontakt
                     </v-btn>
                 </v-col>

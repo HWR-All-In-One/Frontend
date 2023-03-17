@@ -134,7 +134,7 @@ input[type="text"],
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #f0f0f0;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;

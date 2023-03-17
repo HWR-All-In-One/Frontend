@@ -1,6 +1,6 @@
 <template>
     <v-row class="mail-toolbar">
-        
+
         <div class="new">
             <v-dialog v-model="dialog" persistent width="1024">
                 <template v-slot:activator="{ props }">
@@ -59,7 +59,7 @@
         <div>
             <v-btn variant="tonal"><v-icon>mdi-delete-forever</v-icon>Löschen</v-btn>
         </div>
-        
+
     </v-row>
 </template>
 
@@ -188,7 +188,7 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #f0f0f0;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;

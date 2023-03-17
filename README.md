@@ -3,11 +3,17 @@
 ## Build Setup
 
 ```bash
+# install node.js and npm
+https://nodejs.org/de/download
+
+# install yarn
+$ npm install --global yarn
+
 # install dependencies
 $ yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ yarn dev -o
 
 # build for production and launch server
 $ yarn build
@@ -18,6 +24,12 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+
+## Nuxt 3 Repository 
+
+You can also view the Frontend 2 repository via the following link. There is a Nuxt 3 version installed, which has mostly taken over the code from the frontend repository. However, the refactoring would currently take too much time to convert the project to the new Nuxt version without any problems. In addition, plugins are missing that are no longer available in Nuxt 3.
+
+https://github.com/HWR-All-In-One/Frontend2
 
 ## Special Directories
 

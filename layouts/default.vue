@@ -3,9 +3,9 @@
         <v-navigation-drawer permanent miniVariant mini-variant-width="5.5rem" fixed app>
             <v-list class="navbar">
                 <div class="logo">
-                    <a class="home-link" href="/">
+                    <NuxtLink class="home-link" to="/">
                         <img src="~/assets/images/hwr_logo.svg" alt="HWR-APP-logo" />
-                    </a>
+                    </NuxtLink>
                 </div>
                 <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
                     <v-list-item-action>
@@ -47,7 +47,7 @@ export default {
                 {
                     icon: "mdi-account",
                     title: "Benutzerkonto",
-                    to: "/account"
+                    to: "/login/username"
                 },
                 {
                     icon: "mdi-calendar-multiple",

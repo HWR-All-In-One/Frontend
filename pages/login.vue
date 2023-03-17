@@ -1,7 +1,6 @@
 <template>
     <v-app>
         <NuxtLink class="login-button" to="/login/username">Anmelden</NuxtLink>
-        <NuxtLink class="registration-button" to="/registration">Account erstellen</NuxtLink>
         <NuxtChild />
 
         <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>

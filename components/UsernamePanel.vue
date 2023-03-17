@@ -20,7 +20,7 @@
                 label="Benutzer"
                 hint="Dein Nutzername von Moodle">
             </v-text-field>
-            <a class="forgot-user-link" href="/">
+            <a class="forgot-user-link" href="https://www.it.hwr-berlin.de/helpdesk/formulare/">
                 Benutzernamen vergessen?
             </a>
         </div>
@@ -28,7 +28,7 @@
             <v-btn class="create-account-button" secondary to="/registration">
                 Konto erstellen
             </v-btn>
-            <v-btn class="continue-button" to="/login/password" >
+            <v-btn class="continue-button" to="/mail" >
                 Bestätigen
             </v-btn>
         </div>
